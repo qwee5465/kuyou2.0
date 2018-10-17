@@ -1,9 +1,8 @@
-.container {
+.panel,.container{
   position: relative;
   background: #f2f2f2;
   height: 100%;
 }
-
 .ky-sidebar {
   position: fixed;
   display: flex;
@@ -173,7 +172,7 @@
   display: inline-block;
   width: 19px;
   height: 61px;
-  background-image: url(../images/icon_arrow.png);
+  background-image: url(../../assets/images/icon_arrow.png);
   background-repeat: no-repeat;
 }
 
@@ -196,6 +195,7 @@
 .right-frame {
   margin-left: 200px;
   transition: margin-left .3s;
+  height: 100%;
 }
 
 .right-frame.left200 {
@@ -211,7 +211,7 @@
   box-sizing: border-box;
 }
 
-.ky-title-full {
+.right-frame.left200 .ky-title {
   background-color: #59ab76;
 }
 
@@ -223,7 +223,7 @@
   text-decoration: none;
 }
 
-.ky-title-full h1 {
+.right-frame.left200 .ky-title h1 {
   color: #fff;
 }
 
@@ -231,7 +231,8 @@
   margin: 10px;
   padding: 15px;
   min-width: 750px;
-  min-height: 500px;
+  min-height: calc(100% - 70px);
+  font-size:14px;
   box-shadow: 0 0 1px 0 rgba(0,0,0,.2);
   box-sizing: border-box;
   background-color: #fff;

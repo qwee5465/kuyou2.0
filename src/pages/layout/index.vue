@@ -1,0 +1,89 @@
+<template>
+  <div class="panel">
+    <!-- 左边主导航 -->
+    <div class="ky-sidebar" :class="[isShowSidebar?'':'left200']">
+      <!-- 一级导航 -->
+      <div class="one-sidebar">
+        <!-- logo -->
+        <div class="logo-wrap">
+          <img src="@/assets/images/logo.png" alt="logo" />
+        </div>
+        <!-- 常用 -->
+        <div class="only-wrap">
+          <ul class="only-list">
+            <li class="only-item current"><i class="iconfont icon-icon-storage2"></i>概括</li>
+            <li class="only-item"><i class="iconfont icon-icon-storage2"></i>店铺</li>
+            <li class="only-item"><i class="iconfont icon-icon-storage2"></i>商品</li>
+            <li class="only-item"><i class="iconfont icon-icon-storage2"></i>订单</li>
+            <li class="only-item"><i class="iconfont icon-icon-storage2"></i>客户</li>
+            <li class="only-item"><i class="iconfont icon-icon-storage2"></i>客户</li>
+            <li class="only-item"><i class="iconfont icon-icon-storage2"></i>客户</li>
+            <li class="only-item mt50"><i class="iconfont icon-baobiaofenxi"></i>营销</li>
+            <li class="only-item"><i class="iconfont icon-xitongshezhipx"></i>设置</li>
+          </ul>
+        </div>
+      </div>
+      <!-- 二级导航 -->
+      <div class="two-sidebar">
+        <!-- 标题 -->
+        <div class="two-only-title">订单管理</div>
+        <!-- 常用 -->
+        <ul class="two-only-list">
+          <li class="two-only-item current"><a href="javascript:;">订单概括</a></li>
+          <li class="two-only-item"><a href="javascript:;">所有订单</a></li>
+          <li class="two-only-item"><a href="javascript:;">加薪订单</a></li>
+          <li class="two-only-item"><a href="javascript:;">退款维权</a></li>
+          <li class="two-only-item"><a href="javascript:;">评价管理</a></li>
+          <li class="two-only-item"><a href="javascript:;">分销采购</a></li>
+          <li class="two-only-item"><a href="javascript:;">批量退款</a></li>
+          <!-- 分割线 -->
+          <li class="two-only-line"></li>
+          <li class="two-only-item"><a href="javascript:;">订单设置</a></li>
+          <li class="two-only-item"><a href="javascript:;">快递订单</a></li>
+        </ul>
+      </div>
+      <!-- 注销和个人信息 -->
+      <div class="logout-wrap">
+        <ul class="logout-list">
+          <li class="logout-item current"><img src="static/images/tabbar/logout_icon.png" alt="" /></li>
+          <li class="logout-item"><img src="static/images/tabbar/user_icon.png" alt="" /></li>
+          <li class="logout-line"></li>
+        </ul>
+      </div>
+      <!-- 隐藏显示导航按钮 -->
+      <div class="ky-is-sidebar" @click="setShowSidebar">
+        <i class="icon-arrow" :class="[isShowSidebar?'left-icon-arrow':'right-icon-arrow']"></i>
+      </div>
+    </div>
+
+    <!-- 右框部分 -->
+    <div class="right-frame" :class="[isShowSidebar?'':'left200']">
+      <!-- 内容部分 -->
+      <router-view></router-view>
+    </div>
+  </div>
+</template>
+<script>
+export default {
+  name: "layout",
+  data() {
+    return{
+      isShowSidebar: true,
+    }
+  },
+  mounted() {
+    console.log("index/index");
+  },
+  methods: {
+    /**
+     * 显示隐藏Sidebar
+     */
+    setShowSidebar() {
+      this.isShowSidebar = !this.isShowSidebar;
+    }
+  }
+};
+</script>
+<style lang="scss" scoped>
+</style>
+
