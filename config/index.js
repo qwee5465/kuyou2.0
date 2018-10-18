@@ -1,8 +1,6 @@
 'use strict'
-// Template version: 1.3.1
-// see http://vuejs-templates.github.io/webpack for documentation.
-
-const path = require('path')
+const path = require('path');
+const domainName = "http://store-114.yinnima.com"; //测试服务接口地址
 
 module.exports = {
   dev: {
@@ -10,8 +8,40 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
-
+    proxyTable: {
+      '/micro-portal-manager/': {
+          target: domainName,
+          changeOrigin: true
+      },
+      '/micro_portal/': {
+          target: domainName,
+          changeOrigin: true
+      },
+      '/store-bus-goods/': {
+          target: domainName,
+          changeOrigin: true
+      },
+      '/store-bus-shop/': {
+          target: domainName,
+          changeOrigin: true
+      },
+      '/liujia-saas-selfservice/': {
+          target: domainName,
+          changeOrigin: true
+      },
+      '/pay-account-server/': {
+          target: domainName,
+          changeOrigin: true
+      },
+      '/liujia-weixin-server/': {
+          target: domainName,
+          changeOrigin: true
+      },
+      '/liujia-eia-busi/': {
+          target: domainName,
+          changeOrigin: true
+      }
+    },  
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST
     port: 8080, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined

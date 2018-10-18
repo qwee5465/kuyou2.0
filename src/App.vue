@@ -5,16 +5,18 @@
 </template>
 
 <script>
-
 export default {
   name: "App"
 };
 </script>
 
 
-<style lang="scss" scoped>
-  #app{
-    height: 100%;
-  }
-
+<style lang="scss" >
+@import "common/css/color.scss";
+@import "common/css/base.css";
+@import "common/font/iconfont.css";
+@import "common/css/main.css";
+#app {
+  height: 100%;
+}
 </style>

@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import Router from 'vue-router';
+import Environmental from './environmental.js'
 
 Vue.use(Router)
 
@@ -24,6 +25,7 @@ export default new Router({
           keepAlive: true,
         }
       }]
-    }
+    },
+    ...Environmental
   ]
 })

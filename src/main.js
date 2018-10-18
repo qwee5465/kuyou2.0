@@ -7,7 +7,6 @@ import router from './router'
 Vue.config.productionTip = false
 
 router.afterEach((to, from) => {
-  console.log(to);
   document.title = to.meta.title;
 })
 /* eslint-disable no-new */
@@ -17,6 +16,3 @@ new Vue({
   components: { App },
   template: '<App/>'
 })
-import base from "@/common/css/base.css";
-import font from "@/common/font/iconfont.css";
-import main from "@/common/css/main.css";
