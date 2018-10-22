@@ -3,6 +3,11 @@ import Router from 'vue-router';
 import info from './info.js';
 import joinStock from './joinStock.js';
 import order from './order.js';
+import reportForm from './reportForm.js';
+import stock from './stock.js';
+import analysis from './analysis.js';
+import system from './system.js';
+import user from './user.js';
 
 Vue.use(Router)
 
@@ -14,7 +19,7 @@ export default new Router({
       redirect: '/home',
       component: resolve => require(['@/pages/layout/index'], resolve),
       meta: {
-        title: '后台模板',
+        title: '库友进销存',
         keepAlive: true,
       },
       children: [{
@@ -28,7 +33,12 @@ export default new Router({
         },
         ...info,
         ...joinStock,
-        ...order
+        ...order,
+        ...reportForm,
+        ...stock,
+        ...analysis,
+        ...system,
+        ...user
       ]
     },
     {

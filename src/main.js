@@ -10,6 +10,7 @@ Vue.use(ElementUI);
 Vue.config.productionTip = false;
 
 router.afterEach((to, from) => {
+  console.log(to.meta.title);
   document.title = to.meta.title;
 })
 /* eslint-disable no-new */

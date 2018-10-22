@@ -32,7 +32,7 @@
           <div v-for="(item,index) in sidebarList[sidebarIndex].subList" :key="index">
             <li class="two-only-item" :class="[subbarIndex==index?'current':'']"><a href="javascript:;" @click="setSubbarIndex(index)">{{item.name}}</a></li>
             <!-- 分割线 -->
-            <li class="two-only-line" v-if="index==7"></li>
+            <li class="two-only-line" v-if="index==6"></li>
           </div>
           
           <!-- <li class="two-only-item"><a href="javascript:;">所有订单</a></li>
@@ -83,96 +83,97 @@ export default {
         {
           name: "信息",
           icon: "icon-icon-storage2",
-          subList: [ 
-            { name: "单位管理", url: "/home" },
-            { name: "品牌管理", url: "/home" },
-            { name: "供应商类型", url: "/home" },
-            { name: "供应商", url: "/home" },
-            { name: "商品类型", url: "/home" },
-            { name: "商品管理", url: "/home" },
-            { name: "客户类型", url: "/home" },
-            { name: "客户管理", url: "/home" }
+          subList: [
+            { name: "单位管理", url: "/unit/list" },
+            { name: "品牌管理", url: "/brand/list" },
+            { name: "供应商类型", url: "/supplier/typeList" },
+            { name: "供应商", url: "/supplier/list" },
+            { name: "商品类型", url: "/goods/typeList" },
+            { name: "商品管理", url: "/goods/list" },
+            { name: "客户类型", url: "/client/typeList" },
+            { name: "客户管理", url: "/client/list" }
           ]
         },
         {
           name: "入库",
           icon: "icon-icon-storage2",
           subList: [
-            { name: "入库单", url: "/home" },
-            { name: "入库记录", url: "/home" },
-            { name: "退货单", url: "/home" },
-            { name: "退货记录", url: "/home" },
-            { name: "记忆价查询", url: "/home" },
-            { name: "日志查询", url: "/home" }
+            { name: "入库单", url: "/joinStock/joinBill" },
+            { name: "入库记录", url: "/joinStock/joinRecord" },
+            { name: "退货单", url: "/joinStock/returnGoodsBill" },
+            { name: "退货记录", url: "/joinStock/returnGoodsRecord" },
+            { name: "记忆价查询", url: "/joinStock/memoryPrice" },
+            { name: "日志查询", url: "/joinStock/queryLog" }
           ]
         },
         {
           name: "订单",
           icon: "icon-icon-storage2",
           subList: [
-            { name: "订单", url: "/home" },
-            { name: "订单记录", url: "/home" },
-            { name: "出库记录", url: "/home" },
-            { name: "退货单", url: "/home" },
-            { name: "退货记录", url: "/home" },
-            { name: "记忆价查询", url: "/home" },
-            { name: "日志查询", url: "/home" }
+            { name: "订单", url: "/order/orderBill" },
+            { name: "订单记录", url: "/order/orderRecord" },
+            { name: "出库记录", url: "/order/outRecord" },
+            { name: "退货单", url: "/order/returnGoodsBill" },
+            { name: "退货记录", url: "/order/returnGoodsRecord" },
+            { name: "记忆价查询", url: "/order/memoryPrice" },
+            { name: "日志查询", url: "/order/queryLog" }
           ]
         },
         {
           name: "报表",
           icon: "icon-icon-storage2",
           subList: [
-            { name: "采购单", url: "/home" },
-            { name: "客户分拣", url: "/home" },
-            { name: "商品分拣", url: "/home" },
-            { name: "加工单", url: "/home" }
+            { name: "采购单", url: "/reportForm/purchaseReport" },
+            { name: "客户分拣", url: "/reportForm/clientSortingReport" },
+            { name: "商品分拣", url: "/reportForm/goodsSortingReport" },
+            { name: "加工单", url: "/reportForm/machiningReport" }
           ]
         },
         {
           name: "库存",
           icon: "icon-icon-storage2",
           subList: [
-            { name: "默认出库", url: "/home" },
-            { name: "货损记录", url: "/home" },
-            { name: "库存详情", url: "/home" }
+            { name: "默认仓库", url: "/stock/defaultStock" },
+            { name: "货损管理", url: "/stock/cargoDamageManage" },
+            { name: "库存详情", url: "/stock/stockDetail" },
+            { name: "日志查询", url: "/stock/queryLog" }
           ]
         },
         {
           name: "分析",
           icon: "icon-icon-storage2",
           subList: [
-            { name: "毛利分析", url: "/home" },
-            { name: "毛利分析库存", url: "/home" },
-            { name: "毛利分析商品", url: "/home" },
-            { name: "毛利分析供应商", url: "/home" },
-            { name: "库存商品流水", url: "/home" },
-            { name: "客户销售明细", url: "/home" },
-            { name: "客户销售分析", url: "/home" },
-            { name: "自然货损分析", url: "/home" },
-            { name: "供应商明细", url: "/home" }
+            { name: "毛利分析", url: "/analysis/maoriAnalysis" },
+            { name: "库存分析", url: "/analysis/stockAnalysis" },
+            { name: "商品分析", url: "/analysis/goodsAnalysis" },
+            { name: "商品流水", url: "/analysis/goodsStream" },
+            { name: "销售明细", url: "/analysis/saleDetail" },
+            { name: "销售分析", url: "/analysis/saleAnalysis" },
+            { name: "货损分析", url: "/analysis/cargoDamageAnalysis" },
+            { name: "供应商分析", url: "/analysis/supplierAnalysis" },
+            { name: "供应商明细", url: "/analysis/supplierDetail" }
           ]
         },
         {
           name: "系统",
           icon: "icon-baobiaofenxi",
           subList: [
-            { name: "角色管理", url: "/home" },
-            { name: "用户管理", url: "/home" },
-            { name: "日志查询", url: "/home" },
-            { name: "数据备份", url: "/home" }
+            { name: "角色管理", url: "/system/roleManage" },
+            { name: "用户管理", url: "/system/userManage" },
+            { name: "日志查询", url: "/system/queryLog" },
+            { name: "数据备份", url: "/system/dataBackups" }
           ]
         },
         {
           name: "设置",
           icon: "icon-xitongshezhipx",
-          subList: [{ name: "角色管理", url: "/home" }]
+          subList: [{ name: "公司信息", url: "/user/companyInfo" }]
         }
       ],
       sidebarIndex: 0,
       subbarIndex: 0
     };
-  }, 
+  },
   mounted() {
     console.log(this.sidebarList);
   },
@@ -189,10 +190,10 @@ export default {
     /**
      * 设置二级导航栏选中
      */
-    setSubbarIndex(index) { 
+    setSubbarIndex(index) {
       if (index != this.subbarIndex) {
         this.subbarIndex = index;
-        this.$route.push(
+        this.$router.push(
           this.sidebarList[this.sidebarIndex].subList[this.subbarIndex].url
         );
       }

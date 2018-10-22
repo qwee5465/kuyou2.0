@@ -2,7 +2,7 @@
   <div class="container">
     <!-- 标题部分 -->
     <div class="ky-title">
-      <h1>新增供应商</h1>
+      <h1>默认仓库</h1>
     </div>
     <div class="content">
       
