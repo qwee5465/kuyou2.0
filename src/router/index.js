@@ -1,31 +1,40 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Environmental from './environmental.js'
+import info from './info.js';
+import joinStock from './joinStock.js';
+import order from './order.js';
 
 Vue.use(Router)
 
 export default new Router({
   mode: 'history',
-  routes: [
-    {
+  routes: [{
       path: '/',
       name: 'layout',
-      redirect: '/index',
+      redirect: '/home',
       component: resolve => require(['@/pages/layout/index'], resolve),
       meta: {
-        title: '库友进销存',
+        title: '后台模板',
         keepAlive: true,
       },
       children: [{
-        path: '/index',
-        name: 'index',
-        component: resolve => require(['@/pages/index/index'], resolve),
-        meta: {
-          title: '概括',
-          keepAlive: true,
-        }
-      }]
+          path: '/home',
+          name: 'home',
+          component: resolve => require(['@/pages/index/index'], resolve),
+          meta: {
+            title: '概括',
+            keepAlive: true,
+          }
+        },
+        ...info,
+        ...joinStock,
+        ...order
+      ]
     },
-    ...Environmental
+    {
+      path: '*',
+      name: 'empty',
+      component: resolve => require(['@/pages/empty/index'], resolve),
+    },
   ]
 })

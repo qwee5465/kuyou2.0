@@ -75,11 +75,67 @@
 export default {};
 </script>
 <style lang="scss" scoped>
-  @import "@/common/css/color.scss";
-  .content{
-    background-color: $bgColor;
-    box-shadow: none;
-  }
+@import "@/common/css/color.scss";
+.content {
+  background-color: $bgColor;
+  box-shadow: none;
+}
+.survey-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.survey-item {
+  width: calc(50% - 10px);
+  background-color: #fff;
+  padding: 15px 20px;
+  margin: 0 5px 10px;
+  box-sizing: border-box;
+}
+.suryey-title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+.suryey-title label {
+  flex: 1;
+  font-size: 16px;
+  font-weight: 900;
+  color: #333;
+}
+.suryey-title span {
+  flex: 1;
+  text-align: right;
+  font-size: 12px;
+  color: #999;
+}
+.operate-list {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.operate-item {
+  width: 25%;
+  text-align: left;
+}
+.operate-title {
+  margin-bottom: 5px;
+}
+.operate-num {
+  margin-bottom: 5px;
+  font-size: 22px;
+  color: $acColor;
+  text-align: center;
+}
+.operate-other label,
+.operate-other span {
+  font-size: 11px;
+  color: $cColor;
+}
+.notice-box {
+  font-size: 12px;
+  line-height: 22px;
+  color: $cColor;
+}
 </style>
 
 
