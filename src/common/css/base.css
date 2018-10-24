@@ -110,6 +110,9 @@ a:hover {
 a:hover {
   color: #3b9f5f;
 }
+input{
+  border-radius: 0 !important;
+}
 
 ul,
 li {

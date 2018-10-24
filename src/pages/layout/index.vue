@@ -50,8 +50,8 @@
       <!-- 注销和个人信息 -->
       <div class="logout-wrap">
         <ul class="logout-list">
-          <li class="logout-item current"><img src="static/images/tabbar/logout_icon.png" alt="" /></li>
-          <li class="logout-item"><img src="static/images/tabbar/user_icon.png" alt="" /></li>
+          <li class="logout-item current"><img src="@/assets/images/tabbar/logout_icon.png" alt="" /></li>
+          <li class="logout-item"><img src="@/assets/images/tabbar/user_icon.png" alt="" /></li>
           <li class="logout-line"></li>
         </ul>
       </div>
@@ -88,10 +88,10 @@ export default {
             { name: "品牌管理", url: "/brand/list" },
             { name: "供应商类型", url: "/supplier/typeList" },
             { name: "供应商", url: "/supplier/list" },
-            { name: "商品类型", url: "/goods/typeList" },
-            { name: "商品管理", url: "/goods/list" },
             { name: "客户类型", url: "/client/typeList" },
-            { name: "客户管理", url: "/client/list" }
+            { name: "客户管理", url: "/client/list" },
+            { name: "商品类型", url: "/goods/typeList" },
+            { name: "商品管理", url: "/goods/list" }
           ]
         },
         {
