@@ -2,7 +2,7 @@
   <div class="container">
     <!-- 标题部分 -->
     <div class="ky-title">
-      <h1>订单概括</h1>
+      <h1>系统概括</h1>
     </div>
     <div class="content">
       <ul class="survey-list">

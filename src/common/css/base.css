@@ -102,6 +102,7 @@ a {
 }
 
 a:focus,
+a.main-color,
 a:hover {
   color: #59ab76;
   text-decoration: none;
@@ -111,7 +112,7 @@ a:hover {
   color: #3b9f5f;
 }
 input{
-  border-radius: 0 !important;
+  /* border-radius: 0 !important; */
 }
 
 ul,
@@ -735,4 +736,9 @@ li {
 
 .l0 {
   left: 0;
+}
+
+.text-center{
+  text-align: center;
+  justify-content: center;
 }

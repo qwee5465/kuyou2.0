@@ -103,7 +103,9 @@ export default {
             { name: "退货单", url: "/joinStock/returnGoodsBill" },
             { name: "退货记录", url: "/joinStock/returnGoodsRecord" },
             { name: "记忆价查询", url: "/joinStock/memoryPrice" },
-            { name: "日志查询", url: "/joinStock/queryLog" }
+            { name: "日志查询", url: "/joinStock/queryLog" },
+            { name: "", url: "" },
+            { name: "数据列设置", url: "" },
           ]
         },
         {
@@ -123,9 +125,10 @@ export default {
           name: "报表",
           icon: "icon-icon-storage2",
           subList: [
-            { name: "采购单", url: "/reportForm/purchaseReport" },
-            { name: "客户分拣", url: "/reportForm/clientSortingReport" },
-            { name: "商品分拣", url: "/reportForm/goodsSortingReport" },
+            { name: "按商品采购", url: "/reportForm/purchaseReport" },
+            { name: "按客户采购", url: "/reportForm/purchaseReport" },
+            { name: "按客户分拣", url: "/reportForm/clientSortingReport" },
+            { name: "按商品分拣", url: "/reportForm/goodsSortingReport" },
             { name: "加工单", url: "/reportForm/machiningReport" }
           ]
         },

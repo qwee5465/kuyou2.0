@@ -228,6 +228,7 @@
 }
 
 .content {
+  position: relative;
   margin: 10px;
   padding: 15px 0 0;
   min-width: 750px;
@@ -282,16 +283,6 @@
   color: #fff;
 }
 
-.list-warp{
-  padding:15px;
-}
-
-table{
-  background-color: #f5f5f5;
-  font-size: 12px;
-  letter-spacing: 1.2px;
-}
-
 .el-table--border th{
   background-color: #59AB76;
   border: 1px solid #59AB76; 
@@ -308,15 +299,11 @@ table{
   color: #59ab76;
 }
 
-
-table tr:nth-child(odd){background:#fff;}
-table tr:nth-child(even){background:#f9f9f9;}
-
 .el-table--striped .el-table__body tr.el-table__row--striped.current-row td, .el-table__body tr.current-row>td, .el-table__body tr.hover-row.current-row>td, .el-table__body tr.hover-row.el-table__row--striped.current-row>td, .el-table__body tr.hover-row.el-table__row--striped>td, .el-table__body tr.hover-row>td{
   background:#fff;
 }
 
-.el-table .success-row,.el-table--enable-row-hover .el-table__body tr:hover>td {
+.el-table .success-row,.el-table--enable-row-hover .el-table__body tr:hover>td,.el-table .success-row,.el-table--enable-row-hover .el-table__body tr:visited>td {
   background-color: #c5edb1;
 }
 
@@ -329,4 +316,82 @@ table tr:nth-child(even){background:#f9f9f9;}
 }
 .el-pager li:hover {
   color: #59ab76;
+}
+
+.el-cascader__label{
+  padding-top: 7px;
+}
+
+/*----------列表页公共样式---------*/
+.list-warp{
+  padding:15px;
+}
+
+table{
+  background-color: #f5f5f5;
+  font-size: 12px;
+  letter-spacing: 1.2px;
+}
+.ky-table{
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #d0d0d0;
+}
+.ky-table tbody td {
+  border-bottom: 1px solid #d2d2d2;
+  border-left: 1px solid #d2d2d2;
+  text-align: center;
+  height: 37px;
+  vertical-align: middle;
+}
+
+.ky-table thead th{
+  background-color: #59AB76;
+  border: 1px solid #59AB76;
+  color: #fff;
+  text-align: center;
+  height: 37px;
+  vertical-align: middle;
+}
+
+.ky-table tbody tr td.text-left{
+  padding-left: 20px;
+  text-align: left;
+}
+
+
+table tr:nth-child(odd){background:#fff;}
+table tr:nth-child(even){background:#f9f9f9;}
+
+/*----------新增页公共样式---------*/
+.ky-from-group{
+  display: flex;
+  align-items: center;
+  margin: 0 15px;
+  padding:20px 0;
+}
+
+.ky-from-label{
+  width: 100px;
+  text-align: right;
+}
+
+.ky-star{
+  color: #ff0000;
+  vertical-align: middle;
+}
+
+.ky-from-elem{
+  flex: 1;
+  color: #999;
+}
+
+.ky-from-input{
+  width: 200px;
+}
+.ky-from-input.w400{
+  width: 400px;
+}
+.ky-from-textarea{
+  width: 400px;
 }
