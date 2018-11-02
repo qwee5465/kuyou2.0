@@ -1,0 +1,2 @@
+webpackJsonp([19],{"4MNC":function(t,e,s){"use strict";Object.defineProperty(e,"__esModule",{value:!0});var n={render:function(){this.$createElement;this._self._c;return this._m(0)},staticRenderFns:[function(){var t=this.$createElement,e=this._self._c||t;return e("div",{staticClass:"container"},[e("div",{staticClass:"ky-title"},[e("h1",[this._v("退货记录")])]),this._v(" "),e("div",{staticClass:"content"})])}]};var i=s("C7Lr")({},n,!1,function(t){s("ESlX")},"data-v-7faf8f7c",null);e.default=i.exports},ESlX:function(t,e){}});
+//# sourceMappingURL=19.c7ecc24c6444ff949c59.js.map

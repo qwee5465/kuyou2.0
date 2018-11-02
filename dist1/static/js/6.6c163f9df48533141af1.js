@@ -1,0 +1,2 @@
+webpackJsonp([6],{cIl6:function(t,e,s){"use strict";Object.defineProperty(e,"__esModule",{value:!0});var n={render:function(){this.$createElement;this._self._c;return this._m(0)},staticRenderFns:[function(){var t=this.$createElement,e=this._self._c||t;return e("div",{staticClass:"container"},[e("div",{staticClass:"ky-title"},[e("h1",[this._v("库存分析")])]),this._v(" "),e("div",{staticClass:"content"})])}]};var i=s("C7Lr")({},n,!1,function(t){s("yj8d")},"data-v-dfefe340",null);e.default=i.exports},yj8d:function(t,e){}});
+//# sourceMappingURL=6.6c163f9df48533141af1.js.map

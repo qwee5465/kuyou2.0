@@ -1,0 +1,2 @@
+webpackJsonp([18],{"Rl/D":function(t,e,s){"use strict";Object.defineProperty(e,"__esModule",{value:!0});var n={render:function(){this.$createElement;this._self._c;return this._m(0)},staticRenderFns:[function(){var t=this.$createElement,e=this._self._c||t;return e("div",{staticClass:"container"},[e("div",{staticClass:"ky-title"},[e("h1",[this._v("记忆价查询")])]),this._v(" "),e("div",{staticClass:"content"})])}]};var i=s("C7Lr")({},n,!1,function(t){s("Ys/l")},"data-v-8b6d9b5e",null);e.default=i.exports},"Ys/l":function(t,e){}});
+//# sourceMappingURL=18.c7ea9060ed8416889096.js.map

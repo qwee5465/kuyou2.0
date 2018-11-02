@@ -1,7 +1,6 @@
 # kuyou2
 
-> 库友进销存管理软件
-
+> 库友进销存管理软件 
 ## Build Setup
 
 ``` bash
