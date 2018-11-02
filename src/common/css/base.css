@@ -1,6 +1,7 @@
 html,
 body {
   height: 100%;
+  background-color: #F2F2F2;
 }
 
 a,
@@ -101,6 +102,7 @@ a {
 }
 
 a:focus,
+a.main-color,
 a:hover {
   color: #59ab76;
   text-decoration: none;
@@ -108,6 +110,9 @@ a:hover {
 
 a:hover {
   color: #3b9f5f;
+}
+input{
+  /* border-radius: 0 !important; */
 }
 
 ul,
@@ -731,4 +736,9 @@ li {
 
 .l0 {
   left: 0;
+}
+
+.text-center{
+  text-align: center;
+  justify-content: center;
 }
