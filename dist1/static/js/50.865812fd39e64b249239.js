@@ -1,2 +1,0 @@
-webpackJsonp([50],{DUh6:function(e,n,t){"use strict";Object.defineProperty(n,"__esModule",{value:!0});var l={render:function(){var e=this.$createElement;return(this._self._c||e)("div",[this._v("\n  这里是404页面\n")])},staticRenderFns:[]},r=t("C7Lr")(null,l,!1,null,null,null);n.default=r.exports}});
-//# sourceMappingURL=50.865812fd39e64b249239.js.map
