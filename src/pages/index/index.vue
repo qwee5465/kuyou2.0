@@ -77,7 +77,7 @@ export default {};
 <style lang="scss" scoped>
 @import "@/common/css/color.scss";
 .content {
-  background-color: $bgColor;
+  background-color: $bjhColor;
   box-shadow: none;
 }
 .survey-list {

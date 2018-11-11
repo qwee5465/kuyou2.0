@@ -57,7 +57,7 @@
 
 .only-item.current,
 .only-item:hover {
-  background: #3b9f5f;
+  background: #326143;
   color: #fff;
 }
 
@@ -99,17 +99,16 @@
 }
 
 .two-only-item.current {
-  background: #f8f8f8;
+  background: #F0F1F6;
 }
 
 .two-only-item a {
   padding: 0 10px;
   box-sizing: border-box;
-  /* color: #666; */
 }
 
-.two-only-item.current a:focus {
-  color: #666;
+.two-only-item.current a {
+  color: #7E9EA6;
 }
 
 .two-only-line {
@@ -126,7 +125,7 @@
   bottom: 0;
   width: 90px;
   height: 45px;
-  background: #55a270;
+  background: #4F9969;
 }
 
 .logout-list {
@@ -260,67 +259,7 @@
   width: 150px;
 }
 
-/* 重置element-ui 组件样式 */
 
-.el-button--success{
-  background-color: #59ab76;
-  border-color: #3b9f5f;
-  /* border-radius: 0; */
-}
-.el-button--success:focus, .el-button--success:hover { 
-  background-color: #3b9f5f;
-  border-color: #59ab76;
-}
-.el-button--primary{
-  background-color: #38f;
-  border-color: #38f;
-}
-.el-button--primary:focus, .el-button--primary:hover { 
-  background-color: #59f;
-  border-color: #59f;
-}
-.el-button--success span,.el-button--primary span{
-  color: #fff;
-}
-
-.el-table--border th{
-  background-color: #59AB76;
-  border: 1px solid #59AB76; 
-}
-.el-table--border th,.el-table--border td,.el-table--border div{
-  text-align: center;
-  color: #333;
-}
-.el-table--border th .cell,.el-table--border td{
-  color: #fff; 
-}
-
-.el-table--border td a{
-  color: #59ab76;
-}
-
-.el-table--striped .el-table__body tr.el-table__row--striped.current-row td, .el-table__body tr.current-row>td, .el-table__body tr.hover-row.current-row>td, .el-table__body tr.hover-row.el-table__row--striped.current-row>td, .el-table__body tr.hover-row.el-table__row--striped>td, .el-table__body tr.hover-row>td{
-  background:#fff;
-}
-
-.el-table .success-row,.el-table--enable-row-hover .el-table__body tr:hover>td,.el-table .success-row,.el-table--enable-row-hover .el-table__body tr:visited>td {
-  background-color: #c5edb1;
-}
-
-.el-pagination{
-  color: #333;
-  text-align: right;
-}
-.el-pager li.active {
-  color: #59ab76; 
-}
-.el-pager li:hover {
-  color: #59ab76;
-}
-
-.el-cascader__label{
-  padding-top: 7px;
-}
 
 /*----------列表页公共样式---------*/
 .list-warp{

@@ -1,0 +1,61 @@
+/* 重置element-ui 组件样式 */
+
+.el-button--success{
+  background-color: #59ab76;
+  border-color: #3b9f5f;
+  /* border-radius: 0; */
+}
+.el-button--success:focus, .el-button--success:hover { 
+  background-color: #3b9f5f;
+  border-color: #59ab76;
+}
+.el-button--primary{
+  background-color: #38f;
+  border-color: #38f;
+}
+.el-button--primary:focus, .el-button--primary:hover { 
+  background-color: #59f;
+  border-color: #59f;
+}
+.el-button--success span,.el-button--primary span{
+  color: #fff;
+}
+
+.el-table--border th{
+  background-color: #59AB76;
+  border: 1px solid #59AB76; 
+}
+.el-table--border th,.el-table--border td,.el-table--border div{
+  text-align: center;
+  color: #333;
+}
+.el-table--border th .cell,.el-table--border td{
+  color: #fff; 
+}
+
+.el-table--border td a{
+  color: #59ab76;
+}
+
+.el-table--striped .el-table__body tr.el-table__row--striped.current-row td, .el-table__body tr.current-row>td, .el-table__body tr.hover-row.current-row>td, .el-table__body tr.hover-row.el-table__row--striped.current-row>td, .el-table__body tr.hover-row.el-table__row--striped>td, .el-table__body tr.hover-row>td{
+  background:#fff;
+}
+
+.el-table .success-row,.el-table--enable-row-hover .el-table__body tr:hover>td,.el-table .success-row,.el-table--enable-row-hover .el-table__body tr:visited>td {
+  background-color: #c5edb1;
+}
+
+.el-pagination{
+  color: #333;
+  text-align: right;
+}
+.el-pager li.active {
+  color: #59ab76; 
+}
+.el-pager li:hover {
+  color: #59ab76;
+}
+
+.el-cascader__label{
+  padding-top: 7px;
+}

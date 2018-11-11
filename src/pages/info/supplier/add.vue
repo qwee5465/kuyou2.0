@@ -137,7 +137,6 @@ export default {
 <style lang="scss" scoped>
 @import "@/common/css/color.scss";
 .content {
-  background-color: $bgbColor;
   box-shadow: none;
 }
 </style>
