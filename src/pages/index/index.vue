@@ -76,8 +76,7 @@ export default {};
 </script>
 <style lang="scss" scoped>
 @import "@/common/css/color.scss";
-.content {
-  background-color: $bjhColor;
+.content { 
   box-shadow: none;
 }
 .survey-list {
@@ -123,18 +122,15 @@ export default {};
 .operate-num {
   margin-bottom: 5px;
   font-size: 22px;
-  color: $acColor;
   text-align: center;
 }
 .operate-other label,
 .operate-other span {
   font-size: 11px;
-  color: $cColor;
 }
 .notice-box {
   font-size: 12px;
   line-height: 22px;
-  color: $cColor;
 }
 </style>
 

@@ -9,8 +9,8 @@
         <!-- 搜索盒子 -->
         <ul class="search-list">
           <li class="search-item">
-              <label class="search-label"></label>
-              <el-select size="small" clearable  v-model="value" placeholder="请选择">
+              <label class="search-label">供应商类型：</label>
+              <el-select class="search-select" size="small" clearable  v-model="value" placeholder="请选择">
                 <el-option
                   v-for="item in options"
                   :key="item.value"
@@ -20,33 +20,44 @@
               </el-select>
           </li>
           <li class="search-item">
-              <label class="search-label"></label>
-              <el-input class="search-input" style="width: 200px;" size="small" placeholder="请输入供应商名称或电话" v-model="input2"></el-input> 
+              <label class="search-label">供应商名称：</label>
+              <el-input class="search-input"  size="small" placeholder="请输入供应商名称" v-model="input2"></el-input> 
           </li>
-          <li class="search-item">
-            <el-button type="success" size="mini">搜索</el-button>
-          </li>
-          <li class="search-item">
-            <el-button type="primary" @click="goAdd()" size="mini">新增</el-button>
+          <li class="search-item search-item-btn">
+            <el-button class="search-btn" type="success" size="mini">搜索</el-button>
+            <el-button class="search-btn" type="primary" @click="goAdd()" size="mini">新增</el-button>
           </li>
         </ul>
       </div>
       <!-- 列表盒子 -->
-      <div class="list-warp">
-        <el-table :data="tableData" border highlight-current-row size="mini" style="width:100%;">
-          <el-table-column type="index" label="序号" width="90"></el-table-column>
-          <el-table-column prop="typename" label="供应商类型"></el-table-column>
-          <el-table-column prop="name" label="供应商名称"></el-table-column>
-          <el-table-column prop="phone" label="联系电话"></el-table-column>
-          <el-table-column prop="address" label="地址" min-width="250"></el-table-column>
-          <el-table-column prop="remark" label="备注"></el-table-column>
-          <el-table-column label="操作">
-            <template slot-scope="scope">
-              <a href="javascript:;">编辑</a>&nbsp;|&nbsp;<a href="javascript:;">删除</a>
-            </template>
-          </el-table-column>
-        </el-table>
-        <el-pagination class="mt10" layout="prev, pager, next" :total="60"></el-pagination>
+      <div class="ky-table-warp">
+        <table class="ky-table">
+          <thead>
+            <tr>
+              <th>序号</th>
+              <th>供应商类型</th>
+              <th>供应商名称</th>
+              <th>联系电话</th>
+              <th>地址</th>
+              <th>备注</th>
+              <th>操作</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="(item,index) of 20" :key="index">
+              <td>{{item}}</td>
+              <td>蔬菜类</td>
+              <td>啊戴农产品</td>
+              <td>13858866688</td>
+              <td>浙江省杭州市余杭区阿戴毛用</td>
+              <td>这家蔬菜是自种的</td>
+              <td>
+                <a class="ky-table-handle" href="javascript:;">编辑</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a class="ky-table-handle" href="javascript:;">删除</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <el-pagination class="mt15" layout="prev, pager, next" :total="60"></el-pagination>
       </div>
     </div>
   </div>
@@ -76,80 +87,15 @@ export default {
         }
       ],
       value: "",
-      tableData: [
-        {
-          typename: "办公室",
-          name: "余高肉报单",
-          phone: "13295711583",
-          address: "上海市普陀区金沙江路 1518 弄",
-          remark: "加工品"
-        },
-        {
-          typename: "办公室",
-          name: "余高肉报单",
-          phone: "13295711583",
-          address: "上海市普陀区金沙江路 1518 弄上海市普陀区金沙江路 1518 弄",
-          remark: "加工品"
-        },
-        {
-          typename: "办公室",
-          name: "余高肉报单",
-          phone: "13295711583",
-          address: "上海市普陀区金沙江路 1518 弄",
-          remark: "加工品"
-        },
-        {
-          typename: "办公室",
-          name: "余高肉报单",
-          phone: "13295711583",
-          address: "上海市普陀区金沙江路 1518 弄",
-          remark: "加工品"
-        },
-        {
-          typename: "办公室",
-          name: "余高肉报单",
-          phone: "13295711583",
-          address: "上海市普陀区金沙江路 1518 弄",
-          remark: "加工品"
-        },
-        {
-          typename: "办公室",
-          name: "余高肉报单",
-          phone: "13295711583",
-          address: "上海市普陀区金沙江路 1518 弄",
-          remark: "加工品"
-        },
-        {
-          typename: "办公室",
-          name: "余高肉报单",
-          phone: "13295711583",
-          address: "上海市普陀区金沙江路 1518 弄",
-          remark: "加工品"
-        },
-        {
-          typename: "办公室",
-          name: "余高肉报单",
-          phone: "13295711583",
-          address: "上海市普陀区金沙江路 1518 弄",
-          remark: "加工品"
-        },
-        {
-          typename: "办公室",
-          name: "余高肉报单",
-          phone: "13295711583",
-          address: "上海市普陀区金沙江路 1518 弄",
-          remark: "加工品"
-        }
-      ]
     };
   },
-  methods:{
+  methods: {
     /**
      * 新增供应商
      */
-    goAdd(){
-      this.$router.push('/supplier/add');
-    },
+    goAdd() {
+      this.$router.push("/supplier/add");
+    }
   }
 };
 </script>

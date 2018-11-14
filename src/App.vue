@@ -5,18 +5,23 @@
 </template>
 
 <script>
+import base from "@/common/script/base.js";
+
 export default {
-  name: "App"
+  name: "App",
+  mounted(){
+    base.init();
+  },
 };
 </script>
 
 
 <style lang="scss" >
 @import "common/css/color.scss";
-@import "common/css/base.css";
+@import "common/css/base.scss";
 @import "common/font/iconfont.css";
-@import "common/css/resetElement.css";
-@import "common/css/main.css";
+@import "common/css/resetElement.scss";
+@import "common/css/main.scss";
 #app {
   height: 100%;
 }

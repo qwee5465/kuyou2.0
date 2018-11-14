@@ -1,22 +1,22 @@
-$bgColor:#f2f2f2;
-$zColor:#333; //主要颜色
-$cColor:#999; //次要颜色
-$azColor:#3b9f5f; //a主要颜色
-$acColor:#59ab76; //a次要颜色
 //字体
 $zColor:#1E2827; //字体主色调
+$lColor:#59AB76; //字体绿
 $cColor:#7E9EA6; //字体次要色调
 $tcColor:#4A5251; //表格里的字体主色调
 $szColor:#757575; //输入框和选择框字体颜色
 $scColor:#AFAFAF; //输入框和选择框提示颜色
 // 背景
 $bgzColor:#59AB76; //背景主色调
+$bgcColor:#326143; //一级导航选中背景
 $bjhColor:#F0F1F6; //背景色调
 $tszColor:#E9F4ED; //表格选中行的色调
-$ttzColor:#E0E5E5; //表格里隔行变色的色调
+$ttzColor:#f9f9f9; //表格里隔行变色的色调
+$bgbcolor:#4F9969; //导航底部浮动区域背景
 // 边框
-$dhbColor:#E9E9E9;//导航线色调
+$dhbColor:#E9E9E9; //导航线色调
 $wbkColor:#E0E5E5; //文本框和选择框边框色调
 $wbksColor:#59AB76; //文本框选中的色调
-
-
+// 按钮
+$btnColor:#59AB76; //绿色按钮背景
+$btnhColor:#76C090; //绿色按钮鼠标悬浮背景
+$btncColor:#459B63; //绿色按钮点击背景

@@ -1,0 +1,43 @@
+/* 重置element-ui 组件样式 */
+
+.el-button--success,
+.el-button--success:focus {
+  background-color: $btnColor;
+  border-color: $btnColor;
+  /* border-radius: 0; */
+}
+
+.el-button--success:hover {
+  background-color: $btnhColor;
+  border-color: $btnhColor;
+}
+
+.el-button--success:active {
+  background-color: $btncColor;
+  border-color: $btncColor;
+}
+
+.el-button--success span,
+.el-button--primary span {
+  color: #fff;
+}
+
+.el-pagination {
+  text-align: right;
+}
+
+.el-pager li{
+  color: $scColor;
+}
+
+.el-pager li.active {
+  color: $lColor;
+}
+
+.el-pager li:hover {
+  color: $lColor;
+}
+
+.el-cascader__label {
+  padding-top: 7px;
+}

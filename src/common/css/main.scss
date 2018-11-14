@@ -1,8 +1,10 @@
-.panel,.container{
+.panel,
+.container {
   position: relative;
   background: #f2f2f2;
-  height: 100%;
+  min-height: 100%;
 }
+
 .ky-sidebar {
   position: fixed;
   display: flex;
@@ -20,7 +22,7 @@
 
 .one-sidebar {
   width: 90px;
-  background: #59ab76;
+  background: $bgzColor;
 }
 
 .logo-wrap {
@@ -57,7 +59,7 @@
 
 .only-item.current,
 .only-item:hover {
-  background: #326143;
+  background: $bgcColor;
   color: #fff;
 }
 
@@ -79,7 +81,7 @@
   font-size: 14px;
   height: 50px;
   line-height: 50px;
-  border-bottom: 1px solid #f2f2f2;
+  border-bottom: 1px solid $dhbColor;
   box-sizing: border-box;
 }
 
@@ -99,7 +101,7 @@
 }
 
 .two-only-item.current {
-  background: #F0F1F6;
+  background: $bjhColor;
 }
 
 .two-only-item a {
@@ -108,14 +110,13 @@
 }
 
 .two-only-item.current a {
-  color: #7E9EA6;
+  color: $cColor;
 }
 
 .two-only-line {
   margin: 20px 0;
   border: 0;
-  border-top: 1px solid #eee;
-  border-bottom: 1px solid #fff;
+  border-top: 1px solid $dhbColor;
 }
 
 .logout-wrap {
@@ -125,7 +126,7 @@
   bottom: 0;
   width: 90px;
   height: 45px;
-  background: #4F9969;
+  background: $bgbcolor;
 }
 
 .logout-list {
@@ -171,7 +172,7 @@
   display: inline-block;
   width: 19px;
   height: 61px;
-  background-image: url(../../assets/images/icon_arrow.png);
+  background-image: url(./assets/images/icon_arrow.png);
   background-repeat: no-repeat;
 }
 
@@ -211,7 +212,7 @@
 }
 
 .right-frame.left200 .ky-title {
-  background-color: #59ab76;
+  background-color: $bgzColor;
 }
 
 .ky-title h1 {
@@ -228,109 +229,128 @@
 
 .content {
   position: relative;
-  margin: 10px;
-  padding: 15px 0 0;
+  margin: 20px;
+  padding: 20px;
   min-width: 750px;
   min-height: calc(100% - 70px);
-  font-size:14px;
-  box-shadow: 0 0 1px 0 rgba(0,0,0,.2);
+  font-size: 14px;
+  box-shadow: 0 0 1px 0 rgba(0, 0, 0, .2);
   box-sizing: border-box;
   background-color: #fff;
 }
 
 /* 列表页搜索框 */
-.search-warp{
-  background-color: #fff;
-  padding:0 15px 10px;
-  border-bottom: 1px solid #dcdfe6;
+.search-warp {
+  background-color: $bjhColor;
+  padding: 5px 20px;
+  box-sizing: border-box;
 }
-.search-list{
+
+.search-list {
   display: flex;
+  flex-wrap: wrap;
 }
-.search-item{
+
+.search-item {
   display: flex;
   align-items: center;
+  width: 300px;
   padding-right: 15px;
+  margin: 10px 0;
 }
-.search-label{
-  color: #999;
+
+.search-item-btn {
+  width: 100%;
+  padding-left: 100px;
+  box-sizing: border-box;
 }
-.search-input{
-  width: 150px;
+
+.search-label {
+  flex: 1;
+  font-size: 14px;
+  color: $zColor;
+  text-align: right;
+}
+
+.search-input,
+.search-select {
+  width: 200px;
 }
 
 
 
 /*----------列表页公共样式---------*/
-.list-warp{
-  padding:15px;
+.ky-table-warp {
+  padding: 20px 0;
 }
 
-table{
-  background-color: #f5f5f5;
-  font-size: 12px;
-  letter-spacing: 1.2px;
-}
-.ky-table{
+.ky-table {
   width: 100%;
   border-collapse: collapse;
-  border: 1px solid #d0d0d0;
+  border: 1px solid $wbkColor;
 }
+
 .ky-table tbody td {
-  border-bottom: 1px solid #d2d2d2;
-  border-left: 1px solid #d2d2d2;
+  border-bottom: 1px solid $wbkColor;
+  border-left: 1px solid $wbkColor;
   text-align: center;
-  height: 37px;
+  height: 40px;
+  color: $tcColor;
   vertical-align: middle;
 }
 
-.ky-table thead th{
-  background-color: #59AB76;
-  border: 1px solid #59AB76;
+.ky-table thead th {
+  background-color: $bgzColor;
+  border: 1px solid $bgzColor;
   color: #fff;
   text-align: center;
-  height: 37px;
+  height: 40px;
   vertical-align: middle;
 }
 
-.ky-table tbody tr td.text-left{
-  padding-left: 20px;
-  text-align: left;
+.ky-table tbody tr:nth-child(even) {
+  background: $ttzColor;
 }
 
+.ky-table tbody tr:hover,.ky-table tbody tr.current{
+  background: $tszColor;
+}
 
-table tr:nth-child(odd){background:#fff;}
-table tr:nth-child(even){background:#f9f9f9;}
+.ky-table-handle{
+  color: $lColor;
+}
 
 /*----------新增页公共样式---------*/
-.ky-from-group{
+.ky-from-group {
   display: flex;
   align-items: center;
   margin: 0 15px;
-  padding:20px 0;
+  padding: 20px 0;
 }
 
-.ky-from-label{
+.ky-from-label {
   width: 100px;
   text-align: right;
 }
 
-.ky-star{
+.ky-star {
   color: #ff0000;
   vertical-align: middle;
 }
 
-.ky-from-elem{
+.ky-from-elem {
   flex: 1;
   color: #999;
 }
 
-.ky-from-input{
+.ky-from-input {
   width: 200px;
 }
-.ky-from-input.w400{
+
+.ky-from-input.w400 {
   width: 400px;
 }
-.ky-from-textarea{
+
+.ky-from-textarea {
   width: 400px;
 }
