@@ -1,8 +1,12 @@
 .panel,
 .container {
   position: relative;
-  background: #f2f2f2;
-  min-height: 100%;
+  background: $bjhColor;
+  height: 100%;
+}
+
+.container {
+  height: calc(100% - 20px);
 }
 
 .ky-sidebar {
@@ -202,17 +206,18 @@
   margin-left: 0;
 }
 
+
 .ky-title {
   height: 50px;
   padding: 0 21px;
   background-color: #fff;
-  border-bottom: 1px solid #f2f2f2;
-  border-left: 1px solid #f2f2f2;
+  border-bottom: 1px solid $dhbColor;
+  border-left: 1px solid $dhbColor;
   box-sizing: border-box;
 }
 
 .right-frame.left200 .ky-title {
-  background-color: $bgzColor;
+  background-color: $bghColor;
 }
 
 .ky-title h1 {
@@ -240,10 +245,22 @@
 }
 
 /* 列表页搜索框 */
-.search-warp {
+.search-wrap {
+  position: relative;
   background-color: $bjhColor;
   padding: 5px 20px;
   box-sizing: border-box;
+}
+
+.search-other {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+.bill-money {
+  color: $zColor;
+  font-weight: bold;
 }
 
 .search-list {
@@ -254,9 +271,8 @@
 .search-item {
   display: flex;
   align-items: center;
-  width: 300px;
   padding-right: 15px;
-  margin: 10px 0;
+  margin: 5px 50px 5px 0;
 }
 
 .search-item-btn {
@@ -269,13 +285,20 @@
   flex: 1;
   font-size: 14px;
   color: $zColor;
-  text-align: right;
+  text-align: left;
 }
 
 .search-input,
-.search-select {
+.search-select,
+.search-item .search-input {
   width: 200px;
 }
+
+.search-input input,
+.search-select input {
+  border-radius: 2px;
+}
+
 
 
 
@@ -286,6 +309,7 @@
 
 .ky-table {
   width: 100%;
+  background-color: #fff;
   border-collapse: collapse;
   border: 1px solid $wbkColor;
 }
@@ -312,23 +336,55 @@
   background: $ttzColor;
 }
 
-.ky-table tbody tr:hover,.ky-table tbody tr.current{
+.ky-table tbody tr:hover,
+.ky-table tbody tr.current {
   background: $tszColor;
 }
 
-.ky-table-handle{
+.ky-table-handle {
   color: $lColor;
 }
 
+.text-left {
+  padding-left: 20px;
+  text-align: left !important;
+}
+
 /*----------新增页公共样式---------*/
-.ky-from-group {
+.form-wrap {
+  position: relative;
+}
+
+.form-group {
+  display: flex;
+  align-items: center;
+  min-height: 40px;
+  margin: 10px 0;
+}
+
+.form-group label {
+  width: 80px;
+}
+
+.form-group .form-text {
+  color: $scColor;
+  flex: 1;
+  border-bottom: 1px solid $wbkColor;
+  padding: 10px 0;
+}
+
+.form-input {
+  flex: 1;
+}
+
+.ky-form-group {
   display: flex;
   align-items: center;
   margin: 0 15px;
   padding: 20px 0;
 }
 
-.ky-from-label {
+.ky-form-label {
   width: 100px;
   text-align: right;
 }
@@ -338,19 +394,114 @@
   vertical-align: middle;
 }
 
-.ky-from-elem {
+.ky-form-elem {
   flex: 1;
   color: #999;
 }
 
-.ky-from-input {
+.ky-form-input {
   width: 200px;
 }
 
-.ky-from-input.w400 {
+.ky-form-input.w400 {
   width: 400px;
 }
 
-.ky-from-textarea {
+.ky-form-textarea {
   width: 400px;
+}
+
+.btn-wrap {
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+/*----------表格录入区域----------*/
+.table-form-wrap {
+  position: relative;
+  margin-top: 20px;
+}
+
+.table-form-wrap tbody{
+  height: 100px;
+  overflow-y:scroll;
+}
+
+.table-form-input {
+  width: 100%;
+  height: 40px;
+}
+
+.table-form-input .el-input--small {
+  height: 100%;
+}
+
+.table-form-input input {
+  border: none;
+  border-radius: 0;
+  height: 100% !important;
+  background-color: transparent;
+}
+
+/*----------操作区域----------*/
+.table-form-handle {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.table-form-arrow {
+  position: relative;
+  width: 12px;
+  height: 100%;
+}
+
+.table-form-arrow i {
+  position: absolute;
+  width: 12px;
+  height: 6px;
+  left: 0;
+  cursor: pointer;
+  color: #BABABA;
+}
+
+.table-form-arrow i:hover {
+  color: $lColor;
+}
+
+.table-form-arrow .table-form-arrow-up {
+  top: 7px;
+}
+
+.table-form-arrow .table-form-arrow-down {
+  bottom: 14px;
+}
+
+.table-form-plus {
+  width: 16px;
+  height: 16px; 
+  background-image: url(./assets/images/plus_icon.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  cursor: pointer;
+}
+
+.table-form-plus:hover {
+  background-image: url(./assets/images/plus_current_icon.png);
+}
+
+.table-form-delete{
+  width: 16px;
+  height: 16px; 
+  background-image: url(./assets/images/delete_icon.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  cursor: pointer;
+}
+
+.table-form-delete:hover{
+  background-image: url(./assets/images/delete_current_icon.png);
+
 }

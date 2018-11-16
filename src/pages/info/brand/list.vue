@@ -5,34 +5,54 @@
       <h1>品牌管理</h1>
     </div>
     <div class="content">
-      <div class="search-warp">
+      <div class="search-wrap">
         <!-- 搜索盒子 -->
         <ul class="search-list">
           <li class="search-item">
               <label class="search-label">品牌名称：</label>
-              <el-input class="search-input" size="small" placeholder="请输入单位名称" v-model="input2"></el-input> 
+              <el-input class="search-input" size="small" placeholder="请输入品牌名称" v-model="input2"></el-input> 
           </li>
           <li class="search-item">
-            <el-button type="success" size="mini">搜索</el-button>
-          </li>
-          <li class="search-item">
-            <el-button type="primary" size="mini">新增</el-button>
+            <el-button class="search-btn" type="success" size="mini">搜索</el-button>
+            <el-button @click="showDialog = true" class="search-btn" type="primary" size="mini">新增</el-button>
           </li>
         </ul>
       </div>
-      <!-- 列表盒子 -->
-      <div class="list-warp">
-        <el-table :data="tableData" border highlight-current-row size="mini" style="width:100%;">
-          <el-table-column type="index" label="序号" width="90"></el-table-column>
-          <el-table-column prop="name" label="商品名称" width="200"></el-table-column>
-          <el-table-column label="操作">
-            <template slot-scope="scope">
-              <a href="javascript:;">编辑</a>&nbsp;|&nbsp;<a href="javascript:;">删除</a>
-            </template>
-          </el-table-column>
-        </el-table>
-        <el-pagination class="mt10" layout="prev, pager, next" :total="60"></el-pagination>
+      <!-- 列表盒子 --> 
+      <div class="ky-table-warp">
+        <table class="ky-table">
+          <thead>
+            <tr>
+              <th>序号</th>
+              <th>品牌名称</th>
+              <th>操作</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="(item,index) of 10" :key="index">
+              <td>{{item}}</td>
+              <td>金龙鱼</td>
+              <td>
+                <a class="ky-table-handle" href="javascript:;">编辑</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a class="ky-table-handle" href="javascript:;">删除</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <el-pagination class="mt15" layout="prev, pager, next" :total="60"></el-pagination>
       </div>
+      <!-- 新增 -->
+      <el-dialog title="新增品牌" width="350px" :visible.sync="showDialog">
+        <div class="form-wrap">
+          <div class="form-group">
+            <label>品牌名称：</label>
+            <el-input class="form-input" size="small" v-model="branchName" placeholder="请输入品牌名称"></el-input>
+          </div>
+        </div>
+        <div slot="footer" class="dialog-footer">
+          <el-button size="mini" @click="showDialog = false">取 消</el-button>
+          <el-button type="success" size="mini" @click="showDialog = false">确 定</el-button>
+        </div>
+      </el-dialog> 
     </div>
   </div>
   
@@ -42,59 +62,26 @@ export default {
   data() {
     return {
       input2: null,
-      tableData: [
-        {
-          date: "2016-05-02",
-          name: "王小虎",
-          address: "上海市普陀区金沙江路 1518 弄"
-        },
-        {
-          date: "2016-05-04",
-          name: "王小虎",
-          address: "上海市普陀区金沙江路 1517 弄"
-        },
-        {
-          date: "2016-05-01",
-          name: "王小虎",
-          address: "上海市普陀区金沙江路 1519 弄"
-        },
-        {
-          date: "2016-05-02",
-          name: "王小虎",
-          address: "上海市普陀区金沙江路 1518 弄"
-        },
-        {
-          date: "2016-05-04",
-          name: "王小虎",
-          address: "上海市普陀区金沙江路 1517 弄"
-        },
-        {
-          date: "2016-05-01",
-          name: "王小虎",
-          address: "上海市普陀区金沙江路 1519 弄"
-        },
-        {
-          date: "2016-05-02",
-          name: "王小虎",
-          address: "上海市普陀区金沙江路 1518 弄"
-        },
-        {
-          date: "2016-05-04",
-          name: "王小虎",
-          address: "上海市普陀区金沙江路 1517 弄"
-        },
-        {
-          date: "2016-05-01",
-          name: "王小虎",
-          address: "上海市普陀区金沙江路 1519 弄"
-        },
-        {
-          date: "2016-05-03",
-          name: "王小虎",
-          address: "上海市普陀区金沙江路 1516 弄"
-        }
-      ]
+      branchName: null,
+      showDialog: false
     };
+  },
+  mounted() {
+    this.getBranchInfo();
+  },
+  methods: {
+    /**
+     * 获取品牌信息
+     */
+    getBranchInfo() {},
+    /**
+     * 新增品牌
+     */
+    addUnit() {},
+    /**
+     * 编辑品牌
+     */
+    editUnit() {}
   }
 };
 </script>
@@ -103,7 +90,7 @@ export default {
 .content {
   box-shadow: none;
 }
-.list-warp{
+.ky-table-warp {
   width: 50%;
 }
 </style>

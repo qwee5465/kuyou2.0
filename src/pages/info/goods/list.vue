@@ -5,53 +5,64 @@
       <h1>商品管理</h1>
     </div>
     <div class="content">
-      <div class="search-warp">
-        <!-- 搜索盒子 -->
+      <div class="search-wrap">
+        <!-- 表头盒子 -->
         <ul class="search-list">
           <li class="search-item">
-              <label class="search-label"></label>
-              <el-cascader size="small" clearable :options="options" change-on-select placeholder="全部商品类型"></el-cascader>
+              <label class="search-label">商品类型：</label>
+              <el-cascader size="small" class="search-select" clearable :options="options" change-on-select placeholder="请选择商品类型"></el-cascader>
           </li>
           <li class="search-item">
-              <label class="search-label"></label>
-              <el-cascader size="small" clearable :options="options" change-on-select placeholder="全部供应商类型"></el-cascader>
+              <label class="search-label">供应商类型：</label>
+              <el-cascader size="small" class="search-select" clearable :options="options" change-on-select placeholder="请选择供应商类型"></el-cascader>
           </li>
           <li class="search-item">
-            <el-select size="small" clearable  v-model="value" placeholder="请选择供应商">
+            <label class="search-label">供&nbsp;应&nbsp;商：</label>
+            <el-select class="search-select" size="small" clearable  v-model="value" placeholder="请选择供应商">
               <el-option v-for="item in options1" :key="item.value" :label="item.label" :value="item.value"></el-option>
             </el-select>
           </li>
           <li class="search-item">
-              <label class="search-label"></label>
-              <el-input class="search-input" style="width: 250px;" size="small" placeholder="请输入客户名称、电话、简码" v-model="input2"></el-input> 
+              <label class="search-label">商品名称：</label>
+              <el-input class="search-input" size="small" placeholder="请输入商品名称" v-model="input2"></el-input> 
           </li>
-          <li class="search-item">
-            <el-button type="success" size="mini">搜索</el-button>
-          </li>
-          <li class="search-item">
-            <el-button type="primary" @click="goAdd()" size="mini">新增</el-button>
-          </li>
+          <li class="search-item search-item-btn">
+            <el-button class="search-btn" type="success" size="mini">搜索</el-button>
+            <el-button class="search-btn" type="primary" @click="goAdd()" size="mini">新增</el-button>
+          </li> 
         </ul>
       </div>
       <!-- 列表盒子 -->
-      <div class="list-warp">
-        <el-table :data="tableData" border highlight-current-row size="mini" style="width:100%;">
-          <el-table-column type="index" width="70" label="序号"></el-table-column>
-          <el-table-column prop="typename" label="商品类型"></el-table-column>
-          <el-table-column prop="name" label="商品名称"></el-table-column>
-          <el-table-column prop="clienjm" label="客户简码"></el-table-column>
-          <el-table-column prop="than" label="单价比"></el-table-column>
-          <el-table-column prop="phone" label="联系电话"></el-table-column>
-          <el-table-column prop="address" label="地址"></el-table-column>
-          <el-table-column label="操作">
-            <template slot-scope="scope">
-              <a href="javascript:;">查看</a>&nbsp;|&nbsp;
-              <a href="javascript:;">编辑</a>&nbsp;|&nbsp;
-              <a href="javascript:;">删除</a>
-            </template>
-          </el-table-column>
-        </el-table>
-        <el-pagination class="mt10" layout="prev, pager, next" :total="60"></el-pagination>
+      <div class="ky-table-warp">
+        <table class="ky-table">
+          <thead>
+            <tr>
+              <th>序号</th>
+              <th>商品类型</th>
+              <th>商品名称</th>
+              <th>供应商</th>
+              <th>商品编码</th>
+              <th>默认单位</th>
+              <th>单价</th>
+              <th>操作</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="(item,index) of 10" :key="index">
+              <td>{{item}}</td>
+              <td>蔬菜类->叶菜</td>
+              <td>大白菜</td>
+              <td>阿蛋农夫</td>
+              <td>A00001</td>
+              <td>斤</td>
+              <td>1.60</td>
+              <td>
+                <a class="ky-table-handle" href="javascript:;">编辑</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a class="ky-table-handle" href="javascript:;">删除</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <el-pagination class="mt15" layout="prev, pager, next" :total="60"></el-pagination>
       </div>
     </div>
   </div>
@@ -348,79 +359,14 @@ export default {
           label: "北京烤鸭"
         }
       ],
-      value: "",
-      tableData: [
-        {
-          typename: "余杭南苑中心小学",
-          name: "余杭南苑中心小学（教师）",
-          clienjm: "南苑教师",
-          than: "1.30",
-          phone: "13295711583",
-          address: "上海市普陀区金沙江路 1518 弄",
-          remark: "加工品"
-        },
-        {
-          typename: "余杭南苑中心小学",
-          name: "余杭南苑中心小学（教师）",
-          clienjm: "南苑教师",
-          than: "1.30",
-          phone: "13295711583",
-          address: "上海市普陀区金沙江路 1518 弄",
-          remark: "加工品"
-        },
-        {
-          typename: "余杭南苑中心小学",
-          name: "余杭南苑中心小学（教师）",
-          clienjm: "南苑教师",
-          than: "1.30",
-          phone: "13295711583",
-          address: "上海市普陀区金沙江路 1518 弄",
-          remark: "加工品"
-        },
-        {
-          typename: "余杭南苑中心小学",
-          name: "余杭南苑中心小学（教师）",
-          clienjm: "南苑教师",
-          than: "1.30",
-          phone: "13295711583",
-          address: "上海市普陀区金沙江路 1518 弄",
-          remark: "加工品"
-        },
-        {
-          typename: "余杭南苑中心小学",
-          name: "余杭南苑中心小学（教师）",
-          clienjm: "南苑教师",
-          than: "1.30",
-          phone: "13295711583",
-          address: "上海市普陀区金沙江路 1518 弄",
-          remark: "加工品"
-        },
-        {
-          typename: "余杭南苑中心小学",
-          name: "余杭南苑中心小学（教师）",
-          clienjm: "南苑教师",
-          than: "1.30",
-          phone: "13295711583",
-          address: "上海市普陀区金沙江路 1518 弄",
-          remark: "加工品"
-        },
-        {
-          typename: "余杭南苑中心小学",
-          name: "余杭南苑中心小学（教师）",
-          clienjm: "南苑教师",
-          than: "1.30",
-          phone: "13295711583",
-          address: "上海市普陀区金沙江路 1518 弄",
-          remark: "加工品"
-        }
-      ]
+      value: ""
     };
   },
-  methods:{
+  methods: {
     /**
      * 新增商品
      */
-    goAdd(){
+    goAdd() {
       this.$router.push("/goods/add");
     }
   }

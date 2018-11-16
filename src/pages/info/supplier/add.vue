@@ -8,19 +8,19 @@
       <!-- 温馨提示 -->
       <ky-reminder></ky-reminder>
       <!-- 表单 -->
-      <div class="ky-from-group">
-        <label class="ky-from-label"><strong class="ky-star">* </strong>供应商名称：</label>
-        <span class="ky-from-elem">
-          <el-input class="ky-from-input" size="small" placeholder="请输入供应商名称" v-model="input2"></el-input>
+      <div class="ky-form-group">
+        <label class="ky-form-label"><strong class="ky-star">* </strong>供应商名称：</label>
+        <span class="ky-form-elem">
+          <el-input class="ky-form-input" size="small" placeholder="请输入供应商名称" v-model="input2"></el-input>
         </span>
       </div>
-      <div class="ky-from-group">
-        <label class="ky-from-label"><strong class="ky-star">* </strong>电话：</label>
-        <span class="ky-from-elem"><el-input class="ky-from-input" size="small" placeholder="请输入电话号码" v-model="input2"></el-input></span>
+      <div class="ky-form-group">
+        <label class="ky-form-label"><strong class="ky-star">* </strong>电话：</label>
+        <span class="ky-form-elem"><el-input class="ky-form-input" size="small" placeholder="请输入电话号码" v-model="input2"></el-input></span>
       </div>
-      <div class="ky-from-group">
-        <label class="ky-from-label"><strong class="ky-star">* </strong>供应商类型：</label>
-        <span class="ky-from-elem">
+      <div class="ky-form-group">
+        <label class="ky-form-label"><strong class="ky-star">* </strong>供应商类型：</label>
+        <span class="ky-form-elem">
           <el-select size="small" clearable  v-model="value" placeholder="请选择供应商类型">
             <el-option
               v-for="item in options"
@@ -31,9 +31,9 @@
           </el-select>
         </span>
       </div>
-      <div class="ky-from-group">
-        <label class="ky-from-label"><strong class="ky-star">* </strong>地址：</label>
-        <span class="ky-from-elem">
+      <div class="ky-form-group">
+        <label class="ky-form-label"><strong class="ky-star">* </strong>地址：</label>
+        <span class="ky-form-elem">
           <el-cascader
             size="small"
             :options="options2"
@@ -42,15 +42,15 @@
           ></el-cascader>
         </span>
       </div>
-      <div class="ky-from-group">
-        <label class="ky-from-label"><strong class="ky-star">* </strong>街道信息：</label>
-        <span class="ky-from-elem"><el-input class="ky-from-input w400" size="small" placeholder="街道信息" v-model="input2"></el-input></span>
+      <div class="ky-form-group">
+        <label class="ky-form-label"><strong class="ky-star">* </strong>街道信息：</label>
+        <span class="ky-form-elem"><el-input class="ky-form-input w400" size="small" placeholder="街道信息" v-model="input2"></el-input></span>
       </div>
-      <div class="ky-from-group">
-        <label class="ky-from-label"><strong class="ky-star">* </strong>备注：</label>
-        <span class="ky-from-elem"><el-input class="ky-from-textarea" type="textarea" :rows="2" size="small" placeholder="街道信息" v-model="input2"></el-input></span>
+      <div class="ky-form-group">
+        <label class="ky-form-label"><strong class="ky-star">* </strong>备注：</label>
+        <span class="ky-form-elem"><el-input class="ky-form-textarea" type="textarea" :rows="2" size="small" placeholder="街道信息" v-model="input2"></el-input></span>
       </div>
-      <div class="ky-from-group text-center">
+      <div class="ky-form-group text-center">
         <el-button type="success" size="mini">保存</el-button>
         <el-button size="mini" @click="goBack()">返回</el-button>
       </div>

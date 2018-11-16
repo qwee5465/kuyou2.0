@@ -26,7 +26,7 @@
   text-align: right;
 }
 
-.el-pager li{
+.el-pager li {
   color: $scColor;
 }
 
@@ -40,4 +40,24 @@
 
 .el-cascader__label {
   padding-top: 7px;
+}
+
+
+// dialog 样式
+.el-dialog__body {
+  padding: 10px 20px;
+  box-sizing: border-box;
+}
+
+.el-dialog__footer {
+  padding: 0 20px 20px;
+  box-sizing: border-box;
+}
+
+.el-dialog__header {
+  padding: 15px 20px 10px;
+}
+
+.el-dialog__headerbtn {
+  top: 15px;
 }

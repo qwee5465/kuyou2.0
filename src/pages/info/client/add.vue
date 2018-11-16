@@ -8,27 +8,27 @@
       <!-- 温馨提示 -->
       <ky-reminder></ky-reminder>
       <!-- 表单 -->
-      <div class="ky-from-group">
-        <label class="ky-from-label"><strong class="ky-star">* </strong>客户名称：</label>
-        <span class="ky-from-elem"><el-input class="ky-from-input" size="small" placeholder="请输入客户名称" v-model="input2"></el-input></span>
+      <div class="ky-form-group">
+        <label class="ky-form-label"><strong class="ky-star">* </strong>客户名称：</label>
+        <span class="ky-form-elem"><el-input class="ky-form-input" size="small" placeholder="请输入客户名称" v-model="input2"></el-input></span>
       </div>
-      <div class="ky-from-group">
-        <label class="ky-from-label"><strong class="ky-star">* </strong>客户简码：</label>
-        <span class="ky-from-elem">
-          <el-input class="ky-from-input" style="width:60px;" size="small"  v-model="input2"></el-input>
+      <div class="ky-form-group">
+        <label class="ky-form-label"><strong class="ky-star">* </strong>客户简码：</label>
+        <span class="ky-form-elem">
+          <el-input class="ky-form-input" style="width:60px;" size="small"  v-model="input2"></el-input>
           （1-5个文字,用于生成采购单。 如：01）
         </span>
       </div>
-      <div class="ky-from-group">
-        <label class="ky-from-label"><strong class="ky-star">* </strong>单价比：</label>
-        <span class="ky-from-elem">
-          <el-input class="ky-from-input" style="width:60px;" size="small"  v-model="input2"></el-input>
+      <div class="ky-form-group">
+        <label class="ky-form-label"><strong class="ky-star">* </strong>单价比：</label>
+        <span class="ky-form-elem">
+          <el-input class="ky-form-input" style="width:60px;" size="small"  v-model="input2"></el-input>
           （折扣或税率。如：1.13）
         </span>
       </div>
-      <div class="ky-from-group">
-        <label class="ky-from-label"><strong class="ky-star">* </strong>客户类型：</label>
-        <span class="ky-from-elem">
+      <div class="ky-form-group">
+        <label class="ky-form-label"><strong class="ky-star">* </strong>客户类型：</label>
+        <span class="ky-form-elem">
           <el-select size="small" clearable  v-model="value" placeholder="请选择客户类型">
             <el-option
               v-for="item in options"
@@ -39,9 +39,9 @@
           </el-select>
         </span>
       </div>
-      <div class="ky-from-group">
-        <label class="ky-from-label"><strong class="ky-star">* </strong>地址：</label>
-        <span class="ky-from-elem">
+      <div class="ky-form-group">
+        <label class="ky-form-label"><strong class="ky-star">* </strong>地址：</label>
+        <span class="ky-form-elem">
           <el-cascader
             size="small"
             :options="options2"
@@ -50,15 +50,15 @@
           ></el-cascader>
         </span>
       </div>
-      <div class="ky-from-group">
-        <label class="ky-from-label"><strong class="ky-star">* </strong>街道信息：</label>
-        <span class="ky-from-elem"><el-input class="ky-from-input w400" size="small" placeholder="街道信息" v-model="input2"></el-input></span>
+      <div class="ky-form-group">
+        <label class="ky-form-label"><strong class="ky-star">* </strong>街道信息：</label>
+        <span class="ky-form-elem"><el-input class="ky-form-input w400" size="small" placeholder="街道信息" v-model="input2"></el-input></span>
       </div>
-      <div class="ky-from-group">
-        <label class="ky-from-label"><strong class="ky-star">* </strong>备注：</label>
-        <span class="ky-from-elem"><el-input class="ky-from-textarea" type="textarea" :rows="2" size="small" placeholder="街道信息" v-model="input2"></el-input></span>
+      <div class="ky-form-group">
+        <label class="ky-form-label"><strong class="ky-star">* </strong>备注：</label>
+        <span class="ky-form-elem"><el-input class="ky-form-textarea" type="textarea" :rows="2" size="small" placeholder="街道信息" v-model="input2"></el-input></span>
       </div>
-      <div class="ky-from-group text-center">
+      <div class="ky-form-group text-center">
         <el-button type="success" size="mini">保存</el-button>
         <el-button size="mini" @click="goBack()">返回</el-button>
       </div>

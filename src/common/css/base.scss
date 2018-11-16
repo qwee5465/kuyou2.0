@@ -91,13 +91,13 @@ video {
   border: 0;
   font: inherit;
   font-size: 100%;
-  color: #333;
+  color: $zColor;
   line-height: 1.42857143;
   vertical-align: baseline;
 }
 
 a {
-  color: #1E2827;
+  color: $zColor;
   text-decoration: none;
 }
 

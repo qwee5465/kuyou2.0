@@ -10,7 +10,7 @@
   <div class="ky-spec">
     <div class="ky-spec-title">
         <p>内装数,必需大于0.001(如：1箱=10斤 )</p>
-        <el-button type="primary" @click="addSpec()" size="mini">+</el-button>
+        <img class="ky-spec-plus" @click="addSpec()" src="@/assets/images/plus_table_icon.png" alt="">
     </div>
     <table class="ky-table">
       <thead>
@@ -63,7 +63,7 @@ export default {
     /**
      * 添加内装单位
      */
-    addSpec() {
+    addSpec() { 
       this.list.push({ value: "", uname: "" });
     },
     querySearch(queryString, cb) {
@@ -146,18 +146,26 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "@/common/css/color.scss";
+
 .ky-spec {
   min-height: 190px;
   margin-left: 30px;
-  background-color: #eeeeee;
+  background-color: $bjhColor;
 }
 .ky-spec-title {
-  padding-left: 10px;
+  padding: 13px 0 13px 20px;
+  box-sizing: border-box;
   display: flex;
   align-items: center;
   p {
     margin-right: 150px;
-    color: #333;
+    color: $zColor;
+  }
+  .ky-spec-plus {
+    width: 30px;
+    height: 30px;
+    margin-right: 20px;
   }
 }
 .ky-spce-autocomplete {

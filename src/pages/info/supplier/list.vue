@@ -5,7 +5,7 @@
       <h1>供应商记录</h1>
     </div>
     <div class="content">
-      <div class="search-warp">
+      <div class="search-wrap">
         <!-- 搜索盒子 -->
         <ul class="search-list">
           <li class="search-item">
@@ -23,7 +23,7 @@
               <label class="search-label">供应商名称：</label>
               <el-input class="search-input"  size="small" placeholder="请输入供应商名称" v-model="input2"></el-input> 
           </li>
-          <li class="search-item search-item-btn">
+          <li class="search-item">
             <el-button class="search-btn" type="success" size="mini">搜索</el-button>
             <el-button class="search-btn" type="primary" @click="goAdd()" size="mini">新增</el-button>
           </li>

@@ -8,58 +8,64 @@
       <!-- 温馨提示 -->
       <ky-reminder></ky-reminder>
       <!-- 表单 -->
-      <div class="ky-from-group">
-        <label class="ky-from-label"><strong class="ky-star">* </strong>商品名称：</label>
-        <span class="ky-from-elem"><el-input class="ky-from-input" size="small" placeholder="请输入商品名称" v-model="input2"></el-input></span>
-        <label class="ky-from-label">商品编码：</label>
-        <span class="ky-from-elem" style="flex:3;">
-          <el-input class="ky-from-input" style="width:80px;" size="small"  v-model="input2"></el-input>
+      <div class="ky-form-group">
+        <label class="ky-form-label"><strong class="ky-star">* </strong>商品名称：</label>
+        <span class="ky-form-elem"><el-input class="ky-form-input" size="small" placeholder="请输入商品名称" v-model="input2"></el-input></span>
+      </div> 
+      <div class="ky-form-group">
+        <label class="ky-form-label">商品编码：</label>
+        <span class="ky-form-elem">
+          <el-input class="ky-form-input" style="width:80px;" size="small"  v-model="input2"></el-input>
           （用于识别商品XXX）
         </span>
-      </div> 
-      <div class="ky-from-group">
-        <label class="ky-from-label"><strong class="ky-star">* </strong>默认单位：</label>
-        <span class="ky-from-elem"> 
-          <el-autocomplete
+      </div>
+      <div class="ky-form-group">
+        <label class="ky-form-label"><strong class="ky-star">* </strong>默认单位：</label>
+        <span class="ky-form-elem"> 
+          <el-autocomplete 
             size="small"
-            class="inline-input"
+            class="ky-form-input"
             v-model="state1"
             :fetch-suggestions="querySearch" 
             @select="handleSelect"
           ></el-autocomplete>
         </span>
-        <label class="ky-from-label"><strong class="ky-star">* </strong>品牌名称：</label>
-        <span class="ky-from-elem" style="flex:3;"> 
+      </div>
+      <div class="ky-form-group">
+        <label class="ky-form-label"><strong class="ky-star">* </strong>品牌名称：</label>
+        <span class="ky-form-elem"> 
             <el-autocomplete
               size="small"
-              class="inline-input"
+              class="ky-form-input"
               v-model="state1"
               :fetch-suggestions="querySearch" 
               @select="handleSelect"
             ></el-autocomplete>
         </span>
       </div>
-      <div class="ky-from-group">
-        <label class="ky-from-label"><strong class="ky-star">* </strong>商品类型：</label>
-        <span class="ky-from-elem">
+      <div class="ky-form-group">
+        <label class="ky-form-label"><strong class="ky-star">* </strong>商品类型：</label>
+        <span class="ky-form-elem">
           <el-cascader size="small" clearable :options="options" change-on-select placeholder="全部商品类型"></el-cascader>
         </span>
-        <label class="ky-from-label"><strong class="ky-star">* </strong>供应商：</label>
-        <span class="ky-from-elem" style="flex:3;">
+      </div>
+      <div class="ky-form-group">
+        <label class="ky-form-label"><strong class="ky-star">* </strong>供应商：</label>
+        <span class="ky-form-elem">
            <el-autocomplete
               size="small"
-              class="inline-input"
+              class="ky-form-input"
               v-model="state1"
               :fetch-suggestions="querySearch" 
               @select="handleSelect"
             ></el-autocomplete>
         </span>
       </div>
-      <div class="ky-from-group">
+      <div class="ky-form-group">
         <!-- 添加规格组件 -->
         <ky-spec :list="list" defaultText="袋"></ky-spec>
       </div>
-      <div class="ky-from-group text-center">
+      <div class="ky-form-group text-center">
         <el-button type="success" size="mini">保存</el-button>
         <el-button size="mini" @click="goBack()">返回</el-button>
       </div>
@@ -74,7 +80,7 @@ import kySpec from "@/components/goods/ky-spec";
 export default {
   data() {
     return {
-      list:[],
+      list: [],
       input2: null,
       restaurants: [
         { value: "三全鲜食（北新泾店）", address: "长宁区新渔路144号" },

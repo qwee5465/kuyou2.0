@@ -27,12 +27,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "@/common/css/color.scss";
 .ky-reminder {
   position: absolute;
   top: 0;
   right: 0;
   width: 250px;
-  background: #feb235;
+  // background: #feb235;
+  background: $bgzColor;
   padding-bottom: 2px;
 }
 .ky-reminder-title {
@@ -50,7 +52,8 @@ export default {
     padding: 10px;
     box-sizing: border-box;
     strong {
-      color: #feb235;
+      // color: #feb235;
+      color: $bgzColor;
     }
   }
 }
