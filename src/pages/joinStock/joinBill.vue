@@ -57,71 +57,106 @@
       </div>
       <!-- 表格内容区域 -->
       <div class="ky-table-wrap">
-        <table class="ky-table table-form-wrap">
-          <thead>
-            <tr>
-              <th style="width:50px;">序号</th>
-              <th>商品名称</th> 
-              <th>默认单位</th>
-              <th>数量</th>
-              <th>单位进价</th>
-              <th>备注</th>
-              <th style="width:100px;">操作</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr v-for="(item,index) of 100" :key="index">
-              <td>{{item}}</td>
-              <td>
-                <el-autocomplete
-                  class="table-form-input"
-                  size="small"
-                  v-model="state2"
-                  :fetch-suggestions="querySearch"
-                  :trigger-on-focus="false"
-                  @select="handleSelect"
-                ></el-autocomplete>
-              </td>
-              <td>
-                <el-autocomplete
-                  class="table-form-input"
-                  size="small"
-                  v-model="state2"
-                  :fetch-suggestions="querySearch"
-                  @select="handleSelect"
-                ></el-autocomplete>
-              </td> 
-              <td><el-input class="table-form-input" size="small"></el-input></td>
-              <td><el-input class="table-form-input" size="small"></el-input></td>
-              <td><el-input class="table-form-input" size="small"></el-input></td>
-              <td>
-                <div class="table-form-handle">
-                  <!-- 箭头 -->
-                  <span class="table-form-arrow">
-                    <i class="table-form-arrow-up el-icon-caret-top"></i>
-                    <i class="table-form-arrow-down el-icon-caret-bottom"></i>
-                  </span>
-                  <!-- 加号 -->
-                  <span class="table-form-plus"></span>
-                  <!-- 删除 -->
-                  <span class="table-form-delete"></span>
-                </div>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+        <el-table 
+          class="table-form-wrap"
+          size="small"
+          :data="formList"
+          stripe
+          :height=tableHeight
+          border
+          style="width: 100%">
+          <el-table-column
+            type="index"
+            label="序号"
+            width="60">
+          </el-table-column>
+          <el-table-column
+            prop="gname"
+            label="商品名称"
+            width="200">
+            <template slot-scope="scope">
+              <el-autocomplete
+                class="table-form-input"
+                size="small"
+                v-model="scope.row.gname" 
+                :fetch-suggestions="querySearch"
+                :trigger-on-focus="false"
+                @select="handleSelect"
+              >
+            </el-autocomplete>
+            </template>
+          </el-table-column>
+          <el-table-column
+            prop="uname"
+            label="默认单位"
+            width="80">
+            <template slot-scope="scope">
+              <el-autocomplete
+                class="table-form-input"
+                size="small"
+                v-model="scope.row.uname"
+                :fetch-suggestions="querySearch"
+                @select="handleSelect"
+              ></el-autocomplete>
+            </template>
+          </el-table-column>
+          <el-table-column
+            prop="num"
+            label="数量"
+            width="80">
+            <template slot-scope="scope">
+              <el-input class="table-form-input" size="small" v-model="scope.row.num"></el-input>
+            </template>
+          </el-table-column>
+          <el-table-column
+            prop="price"
+            label="单位进价"
+            width="80">
+            <template slot-scope="scope">
+              <el-input class="table-form-input" size="small" v-model="scope.row.price"></el-input>
+            </template>
+          </el-table-column>
+          <el-table-column
+            prop="remark"
+            label="备注">
+            <template slot-scope="scope">
+              <el-input class="table-form-input" size="small" v-model="scope.row.remark"></el-input>
+            </template>
+          </el-table-column>
+          <el-table-column 
+            label="操作"
+            width="100">
+            <template slot-scope="scope">
+              <div class="table-form-handle">
+                <!-- 箭头 -->
+                <span class="table-form-arrow">
+                  <i class="table-form-arrow-up el-icon-caret-top"></i>
+                  <i class="table-form-arrow-down el-icon-caret-bottom"></i>
+                </span>
+                <!-- 加号 -->
+                <span @click="pulsRow()"  class="table-form-plus"></span>
+                <!-- 删除 -->
+                <span class="table-form-delete"></span>
+              </div>
+            </template>
+          </el-table-column>
+        </el-table>
       </div>
     </div>
   </div>
   
 </template>
 <script>
+import tableInput from "@/common/script/tableInput";
+
 export default {
   data() {
     return {
       restaurants: [],
       state2: "",
       value2: "",
+      formList: [],
+      tableHeight: document.body.clientHeight - 260,
       pickerOptions1: {
         shortcuts: [
           {
@@ -148,7 +183,42 @@ export default {
       }
     };
   },
+  mounted() { 
+    this.$nextTick(_=>{
+      tableInput.init('.table-form-wrap');
+    });
+    this.getDataInfo();
+    this.restaurants = this.loadAll();
+  },
   methods: {
+    /**
+     * 加一行
+     */
+    pulsRow(){
+      var inputs = document.querySelectorAll('.table-form-input input');
+      inputs[2].focus();
+      inputs[2].select();
+    },
+    /**
+     * 清除商品
+     */
+    clearGoodsName(index){
+      console.log(index);
+    },
+    /**
+     * 获取数据
+     */
+    getDataInfo() {
+      for (var i = 0; i < 30; i++) {
+        this.formList.push({
+          gname: "东北大白菜",
+          uname: "公斤",
+          num: "11.00",
+          price: "3.5",
+          remark: "要好的"
+        });
+      }
+    },
     querySearch(queryString, cb) {
       var restaurants = this.restaurants;
       var results = queryString
@@ -181,16 +251,19 @@ export default {
     handleSelect(item) {
       console.log(item);
     }
-  },
-  mounted() {
-    this.restaurants = this.loadAll();
   }
 };
 </script>
 <style lang="scss" scoped>
 @import "@/common/css/color.scss";
+.container {
+  height: 100%;
+}
 .content {
   box-shadow: none;
+  // height: calc(100% - 50px);
+  padding-bottom: 0;
+  margin-bottom: 0;
 }
 </style>
 
