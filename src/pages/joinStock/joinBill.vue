@@ -91,13 +91,11 @@
             label="默认单位"
             width="80">
             <template slot-scope="scope">
-              <el-autocomplete
-                class="table-form-input"
-                size="small"
-                v-model="scope.row.uname"
-                :fetch-suggestions="querySearch"
-                @select="handleSelect"
-              ></el-autocomplete>
+              <select>
+                <option value="1">公斤</option>
+                <option value="2">斤</option>
+                <option value="3">箱</option>
+              </select>
             </template>
           </el-table-column>
           <el-table-column
@@ -183,9 +181,9 @@ export default {
       }
     };
   },
-  mounted() { 
-    this.$nextTick(_=>{
-      tableInput.init('.table-form-wrap');
+  mounted() {
+    this.$nextTick(_ => {
+      tableInput.init(".table-form-wrap tbody tr");
     });
     this.getDataInfo();
     this.restaurants = this.loadAll();
@@ -194,15 +192,15 @@ export default {
     /**
      * 加一行
      */
-    pulsRow(){
-      var inputs = document.querySelectorAll('.table-form-input input');
+    pulsRow() {
+      var inputs = document.querySelectorAll(".table-form-input input");
       inputs[2].focus();
       inputs[2].select();
     },
     /**
      * 清除商品
      */
-    clearGoodsName(index){
+    clearGoodsName(index) {
       console.log(index);
     },
     /**
@@ -237,13 +235,24 @@ export default {
     },
     loadAll() {
       return [
-        { value: "三全鲜食（北新泾店）", address: "长宁区新渔路144号" },
         {
-          value: "Hot honey 首尔炸鸡（仙霞路）",
+          value: "白菜",
+          address: "长宁区新渔路144号"
+        },
+        {
+          value: "土豆",
           address: "上海市长宁区淞虹路661号"
         },
         {
-          value: "新旺角茶餐厅",
+          value: "豆芽",
+          address: "上海市普陀区真北路988号创邑金沙谷6号楼113"
+        },
+        {
+          value: "鸡蛋",
+          address: "上海市普陀区真北路988号创邑金沙谷6号楼113"
+        },
+        {
+          value: "韭菜",
           address: "上海市普陀区真北路988号创邑金沙谷6号楼113"
         }
       ];
