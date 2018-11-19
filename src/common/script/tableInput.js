@@ -20,24 +20,12 @@ function init(name) {
       $(this).keydown(function (evt) {
         var r = $(this).attr("_r_");
         var c = $(this).attr("_c_");
-        var ul = $('.el-autocomplete-suggestion__list:not(:hidden)');
+        var ul = $('.ky-autocomplete-list:not(:hidden)');
         var tRow;
         if (evt.which == 38) { //上
           if (this.nodeName != "SELECT") {
             //ul存在的话
-            if (ul.length > 0) {
-              if (ul.is(':hidden')) {
-                if (r == 0)
-                  return;
-
-                r--; //向上一行
-
-                tRow = rowInputs[r];
-                if (c > tRow.length - 1) {
-                  c = tRow.length - 1;
-                }
-              }
-            } else {
+            if (ul.length == 0) {
               if (r == 0)
                 return;
               r--; //向上一行
@@ -46,26 +34,15 @@ function init(name) {
               if (c > tRow.length - 1) {
                 c = tRow.length - 1;
               }
+              $(rowInputs[r].data[c].input).focus();
+              setTimeout(function () {
+                $(rowInputs[r].data[c].input).select();
+              }, 10);
             }
-            $(rowInputs[r].data[c].input).focus();
-            setTimeout(function () {
-              $(rowInputs[r].data[c].input).select();
-            }, 10);
           }
         } else if (evt.which == 40) { //下
           if (this.nodeName != "SELECT") {
-            if (ul.length > 0) {
-              if (ul.is(':hidden')) {
-                if (r == rowInputs.length - 1) { //已经是最后一行
-                  return;
-                }
-                r++;
-                tRow = rowInputs[r];
-                if (c > tRow.length - 1) {
-                  c = tRow.length - 1;
-                }
-              }
-            } else {
+            if (ul.length == 0) {
               if (r == rowInputs.length - 1) { //已经是最后一行
                 return;
               }
@@ -74,11 +51,11 @@ function init(name) {
               if (c > tRow.length - 1) {
                 c = tRow.length - 1;
               }
+              $(rowInputs[r].data[c].input).focus();
+              setTimeout(function () {
+                $(rowInputs[r].data[c].input).select();
+              }, 10);
             }
-            $(rowInputs[r].data[c].input).focus();
-            setTimeout(function () {
-              $(rowInputs[r].data[c].input).select();
-            }, 10);
           }
         } else if (evt.which == 37) { //左  
           if (this.nodeName == "SELECT") {

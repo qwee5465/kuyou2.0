@@ -100,6 +100,14 @@
   }
 }
 
+.table-form-wrap.el-table{
+  .cell{
+    overflow: initial;
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+} 
+
 .el-autocomplete-suggestion li:hover {
   background-color: $bgzColor;
   color: #fff;
