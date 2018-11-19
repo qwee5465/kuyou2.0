@@ -63,56 +63,58 @@
 }
 
 // 重置表格样式
-.el-table--border th{
+.el-table--border th {
   background: $bgzColor;
   text-align: center;
   border-right: 1px solid $bgzColor;
 }
 
-.el-table--striped .el-table__body tr.el-table__row--striped td{
+.el-table--striped .el-table__body tr.el-table__row--striped td {
   background: $ttzColor;
 }
 
-.table-form-wrap .el-input--suffix .el-input__inner{
+.table-form-wrap .el-input--suffix .el-input__inner {
   color: $tcColor;
   padding-right: 0;
 }
 
-.el-input--small{
-  .el-input__inner{
+.el-input--small {
+  .el-input__inner {
     color: $szColor;
     line-height: 33px;
   }
-} 
+}
 
-.table-form-wrap {
-  .el-input__prefix, .el-input__suffix{
+.table-form-wrap { 
+  .el-input__prefix,
+  .el-input__suffix {
     top: -6px;
     right: 0;
     color: $tcColor;
   }
-  .el-input--small{
-    .el-input__inner{
+
+  .el-input--small {
+    .el-input__inner {
       text-align: center;
     }
-  } 
+  }
 }
 
-.el-autocomplete-suggestion li:hover{
+.el-autocomplete-suggestion li:hover {
   background-color: $bgzColor;
   color: #fff;
 }
 
-.el-autocomplete-suggestion{
+.el-autocomplete-suggestion {
   min-width: 100px
 }
 
 
-.el-table--border th .cell{
+.el-table--border th .cell {
   color: #fff;
 }
 
-.el-table--border td{
+.el-table--border td {
   text-align: center;
-  padding:0 0;
+  padding: 0 0;
 }

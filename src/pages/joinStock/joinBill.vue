@@ -75,15 +75,7 @@
             label="商品名称"
             width="200">
             <template slot-scope="scope">
-              <el-autocomplete
-                class="table-form-input"
-                size="small"
-                v-model="scope.row.gname" 
-                :fetch-suggestions="querySearch"
-                :trigger-on-focus="false"
-                @select="handleSelect"
-              >
-            </el-autocomplete>
+              <ky-autocomplete v-model="scope.row.gname"></ky-autocomplete>
             </template>
           </el-table-column>
           <el-table-column
@@ -91,7 +83,7 @@
             label="默认单位"
             width="80">
             <template slot-scope="scope">
-              <select>
+              <select class="table-form-select">
                 <option value="1">公斤</option>
                 <option value="2">斤</option>
                 <option value="3">箱</option>
@@ -146,6 +138,7 @@
 </template>
 <script>
 import tableInput from "@/common/script/tableInput";
+import kyAutocomplete from "@/components/ky-autocomplete.vue";
 
 export default {
   data() {
@@ -180,6 +173,9 @@ export default {
         billMoney: "7,812.00"
       }
     };
+  },
+  components: {
+    kyAutocomplete
   },
   mounted() {
     this.$nextTick(_ => {

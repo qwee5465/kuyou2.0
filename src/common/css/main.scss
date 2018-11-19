@@ -444,7 +444,22 @@
 
 .table-form-input {
   width: 100%;
-  // height: 34px;
+  height: 33px;
+  border: none;
+  background-color: transparent;
+  color: $szColor;
+  text-align: center;
+}
+
+.table-form-input:focus {
+  outline: none;
+}
+
+.table-form-select {
+  height: 33px;
+  border: none;
+  background-color: transparent;
+  color: $szColor;
 }
 
 .table-form-input .el-input--small {
@@ -456,7 +471,7 @@
   border-radius: 0;
   height: 100% !important;
   background-color: transparent;
-  padding:0;
+  padding: 0;
 }
 
 /*----------操作区域----------*/
@@ -497,7 +512,7 @@
 
 .table-form-plus {
   width: 16px;
-  height: 16px; 
+  height: 16px;
   background-image: url(./assets/images/plus_icon.png);
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -508,15 +523,15 @@
   background-image: url(./assets/images/plus_current_icon.png);
 }
 
-.table-form-delete{
+.table-form-delete {
   width: 16px;
-  height: 16px; 
+  height: 16px;
   background-image: url(./assets/images/delete_icon.png);
   background-repeat: no-repeat;
   background-size: 100% 100%;
   cursor: pointer;
 }
 
-.table-form-delete:hover{
+.table-form-delete:hover {
   background-image: url(./assets/images/delete_current_icon.png);
 }
