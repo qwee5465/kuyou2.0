@@ -105,7 +105,7 @@ export default {
             { name: "记忆价查询", url: "/joinStock/memoryPrice" },
             { name: "日志查询", url: "/joinStock/queryLog" },
             { name: "", url: "" },
-            { name: "数据列设置", url: "" },
+            { name: "数据列设置", url: "/joinStock/setDate" }
           ]
         },
         {
@@ -118,7 +118,9 @@ export default {
             { name: "退货单", url: "/order/returnGoodsBill" },
             { name: "退货记录", url: "/order/returnGoodsRecord" },
             { name: "记忆价查询", url: "/order/memoryPrice" },
-            { name: "日志查询", url: "/order/queryLog" }
+            { name: "日志查询", url: "/order/queryLog" },
+            { name: "", url: "" },
+            { name: "数据列设置", url: "/order/setData" }
           ]
         },
         {
@@ -126,7 +128,7 @@ export default {
           icon: "icon-icon-storage2",
           subList: [
             { name: "按商品采购", url: "/reportForm/purchaseReport" },
-            { name: "按客户采购", url: "/reportForm/purchaseReport" },
+            { name: "按客户采购", url: "/reportForm/clientPurchase" },
             { name: "按客户分拣", url: "/reportForm/clientSortingReport" },
             { name: "按商品分拣", url: "/reportForm/goodsSortingReport" },
             { name: "加工单", url: "/reportForm/machiningReport" }
@@ -137,7 +139,7 @@ export default {
           icon: "icon-icon-storage2",
           subList: [
             { name: "默认仓库", url: "/stock/defaultStock" },
-            { name: "货损管理", url: "/stock/cargoDamageManage" },
+            { name: "库存盘点", url: "/stock/inventory" },
             { name: "库存详情", url: "/stock/stockDetail" },
             { name: "日志查询", url: "/stock/queryLog" }
           ]
@@ -170,7 +172,10 @@ export default {
         {
           name: "设置",
           icon: "icon-xitongshezhipx",
-          subList: [{ name: "公司信息", url: "/user/companyInfo" }]
+          subList: [
+            { name: "公司信息", url: "/user/companyInfo" },
+            { name: "参数设置", url: "" }
+          ]
         }
       ],
       sidebarIndex: 0,

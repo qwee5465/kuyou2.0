@@ -58,4 +58,14 @@ export default [{
     title: '日志查询',
     keepAlive: true
   }
+}, {
+  path: '/joinStock/setDate',
+  name: 'setDate',
+  component: (resolve) => {
+    require(['@/pages/joinStock/setDate'], resolve)
+  },
+  meta: {
+    title: '数据列设置',
+    keepAlive: true
+  }
 }]

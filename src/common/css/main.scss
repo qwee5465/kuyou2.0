@@ -312,6 +312,13 @@
   background-color: #fff;
   border-collapse: collapse;
   border: 1px solid $wbkColor;
+  caption{
+    height: 35px;
+    background: $bjhColor;
+    line-height: 35px;
+    color: $tcColor;
+    font-size: 14px;
+  }
 }
 
 .ky-table tbody td {
@@ -321,6 +328,11 @@
   height: 34px;
   color: $tcColor;
   vertical-align: middle;
+}
+
+.ky-table-handle {
+  color: $lColor !important;
+  cursor: pointer;
 }
 
 .ky-table thead th {
@@ -339,10 +351,6 @@
 .ky-table tbody tr:hover,
 .ky-table tbody tr.current {
   background: $tszColor;
-}
-
-.ky-table-handle {
-  color: $lColor;
 }
 
 .text-left {
@@ -534,4 +542,65 @@
 
 .table-form-delete:hover {
   background-image: url(./assets/images/delete_current_icon.png);
+}
+
+/*弹框样式*/
+.ky-detail-dialog {
+  margin-top:30px !important;
+  height: calc(100% - 60px);
+  overflow: hidden;
+  .el-dialog__header{
+    padding: 20px 20px 10px 30px;
+    .el-dialog__title{
+      color: $cColor;
+      font-size:14px;
+    }
+  }
+  .el-dialog__body{
+    padding: 10px 30px;
+    overflow-y: auto;
+    height: calc(100% - 80px);
+  }
+}
+
+.ky-detail-dialog-wrap{ 
+  .ky-detail-dialog-btn{
+    margin-bottom: 20px;
+    text-align: right;
+  }
+  .ky-detail-dialog-title{
+    background-color: $bjhColor;
+    .detail-list{
+      display: flex;
+      flex-wrap: wrap;
+      padding:0 30px 20px;
+      box-sizing: border-box;
+      .detail-item-block{
+        width:100%;
+        padding:15px 0;
+        input{
+          text-align: center;
+          border: none;
+          background-color: transparent;
+          font-size:18px;
+          color: $zColor;
+        }
+      }
+      .detail-item{
+        width: 300px;
+        margin: 10px 0;
+        display: flex;
+        align-items: center;
+        label{
+          max-width: 100px;
+        }
+        span{
+          flex:1;
+        }
+      }
+    }
+  }
+  .ky-detail-dialog-content{
+    margin-top: 20px;
+  }
 }

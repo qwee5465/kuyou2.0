@@ -68,4 +68,14 @@ export default [{
     title: '日志查询',
     keepAlive: true
   }
+}, {
+  path: '/order/setData',
+  name: 'setData1',
+  component: (resolve) => {
+    require(['@/pages/order/setData'], resolve)
+  },
+  meta: {
+    title: '数据列设置',
+    keepAlive: true
+  }
 }]

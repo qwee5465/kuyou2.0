@@ -5,7 +5,17 @@ export default [{
     require(['@/pages/reportForm/purchaseReport'], resolve)
   },
   meta: {
-    title: '采购单',
+    title: '采购单->按商品采购',
+    keepAlive: true
+  }
+},{
+  path: '/reportForm/clientPurchase',
+  name: 'clientPurchase',
+  component: (resolve) => {
+    require(['@/pages/reportForm/clientPurchase'], resolve)
+  },
+  meta: {
+    title: '采购单->按客户采购',
     keepAlive: true
   }
 }, {

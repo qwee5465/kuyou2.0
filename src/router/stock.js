@@ -9,13 +9,13 @@ export default [{
     keepAlive: true
   }
 }, {
-  path: '/stock/cargoDamageManage',
-  name: 'cargoDamageManage',
+  path: '/stock/inventory',
+  name: 'inventory',
   component: (resolve) => {
-    require(['@/pages/stock/cargoDamageManage'], resolve)
+    require(['@/pages/stock/inventory'], resolve)
   },
   meta: {
-    title: '货损管理',
+    title: '库存盘点',
     keepAlive: true
   }
 }, {

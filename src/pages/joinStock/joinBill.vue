@@ -17,7 +17,7 @@
               <el-input class="search-input" size="small" v-model="form.jsid"></el-input> 
           </li>
           <li class="search-item">
-              <label class="search-label">入库名称：</label>
+              <label class="search-label">单据名称：</label>
               <el-input class="search-input" size="small" v-model="form.billName"></el-input> 
           </li>
           <li class="search-item">

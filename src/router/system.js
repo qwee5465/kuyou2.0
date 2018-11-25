@@ -38,4 +38,14 @@ export default [{
     title: '数据备份',
     keepAlive: true
   }
+}, {
+  path: '/system/setPower',
+  name: 'setPower',
+  component: (resolve) => {
+    require(['@/pages/system/setPower'], resolve)
+  },
+  meta: {
+    title: '设置权限',
+    keepAlive: true
+  }
 }]
