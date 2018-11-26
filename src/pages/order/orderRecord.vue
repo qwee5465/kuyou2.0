@@ -23,12 +23,6 @@
               </el-date-picker>
           </li>
           <li class="search-item">
-              <label class="search-label">审核状态：</label>
-              <el-select class="search-select" size="small" clearable  v-model="value" placeholder="全部">
-                <el-option v-for="item in states" :key="item.value" :label="item.label" :value="item.value"></el-option>
-              </el-select>
-          </li>
-          <li class="search-item">
             <label class="search-label">单据号：</label>
             <el-input class="search-input" size="small" placeholder="如：PR2_20181101055522" v-model="input2"></el-input> 
           </li>
@@ -81,7 +75,7 @@
             </tr>
           </tbody>
         </table>
-        <el-dialog title="入库单据纪录明细单" width="90%" custom-class="ky-detail-dialog" :visible.sync="dialogTableVisible">
+        <el-dialog title="订单据纪录明细单" width="90%" custom-class="ky-detail-dialog" :visible.sync="dialogTableVisible">
           <div class="ky-detail-dialog-wrap">
             <div class="ky-detail-dialog-btn">
               <el-button size="small" type="warning">审核</el-button>
@@ -162,7 +156,7 @@
                     <td>3</td>
                     <td>53.0</td>
                     <td>159</td>
-                    <th>要土鸡蛋</th>
+                    <td>要土鸡蛋</td>
                   </tr>
                 </tbody>
               </table>

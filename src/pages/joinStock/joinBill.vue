@@ -2,7 +2,7 @@
   <div class="container">
     <!-- 标题部分 -->
     <div class="ky-title">
-      <h1>入库单</h1>
+      <h1>入库单->新增</h1>
     </div>
     <div class="content">
       <!-- 按钮区域 -->
@@ -12,10 +12,10 @@
       <div class="search-wrap">
         <!-- 搜索盒子 -->
         <ul class="search-list">
-          <li class="search-item">
+          <!-- <li class="search-item">
               <label class="search-label">单&nbsp;据&nbsp;号：</label>
               <el-input class="search-input" size="small" v-model="form.jsid"></el-input> 
-          </li>
+          </li> -->
           <li class="search-item">
               <label class="search-label">单据名称：</label>
               <el-input class="search-input" size="small" v-model="form.billName"></el-input> 

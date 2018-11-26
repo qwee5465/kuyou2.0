@@ -74,7 +74,7 @@
               <td>未审核</td>
               <td>8点前送到</td>
               <td>
-                <a class="ky-table-handle" href="javascript:;">查看</a>
+                <a class="ky-table-handle" @click="goDetail(1)" href="javascript:;">查看</a>
                 &nbsp;&nbsp;|&nbsp;&nbsp;<a class="ky-table-handle" href="javascript:;">编辑</a>
                 &nbsp;&nbsp;|&nbsp;&nbsp;<a class="ky-table-handle" @click="delBill(1)" href="javascript:;">删除</a>
               </td>
@@ -106,7 +106,7 @@
                   <span>15151512552</span>
                 </li>
                 <li class="detail-item">
-                    <label>入库日期：</label>
+                    <label>单据日期：</label>
                     <span>2018-11-21</span>
                 </li>
                 <li class="detail-item">
@@ -125,6 +125,7 @@
                     <th>数量</th>
                     <th>进价</th>
                     <th>总金额</th>
+                    <th>备注</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -135,6 +136,7 @@
                     <td>100</td>
                     <td>5.30</td>
                     <td>530</td>
+                    <td>这批有点差</td>
                   </tr>
                 </tbody>
               </table>
@@ -150,7 +152,7 @@
 export default {
   data() {
     return {
-      billName:'杭州田旺',
+      billName: "杭州田旺",
       dialogTableVisible: false,
       input2: null,
       states: [
@@ -491,6 +493,12 @@ export default {
   },
   methods: {
     /**
+     * 查看单据详情
+     */
+    goDetail(id) {
+      this.$router.push({ path: "/joinStock/joinBillDetail", query: { id: id } });
+    },
+    /**
      * 显示入库单信息
      */
     showDetail(index) {
@@ -499,18 +507,19 @@ export default {
     /**
      * 删除单据
      */
-    delBill(index){
-      this.$confirm('入库单未审核状态可以删除, 是否继续?', '提示', {
-          confirmButtonText: '确定',
-          cancelButtonText: '取消',
-          type: 'warning'
-        }).then(() => {
+    delBill(index) {
+      this.$confirm("入库单未审核状态可以删除, 是否继续?", "提示", {
+        confirmButtonText: "确定",
+        cancelButtonText: "取消",
+        type: "warning"
+      })
+        .then(() => {
           this.$message({
-            type: 'success',
-            message: '删除成功!'
+            type: "success",
+            message: "删除成功!"
           });
-        }).catch(() => {    
-        });
+        })
+        .catch(() => {});
     }
   }
 };
@@ -520,7 +529,6 @@ export default {
 .content {
   box-shadow: none;
 }
-
 </style>
 
 

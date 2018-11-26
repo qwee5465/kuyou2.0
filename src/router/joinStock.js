@@ -19,6 +19,16 @@ export default [{
     keepAlive: true
   }
 }, {
+  path: '/joinStock/joinBillDetail',
+  name: 'joinBillDetail',
+  component: (resolve) => {
+    require(['@/pages/joinStock/joinBillDetail'], resolve)
+  },
+  meta: {
+    title: '单据详情',
+    keepAlive: true
+  }
+}, {
   path: '/joinStock/returnGoodsBill',
   name: 'returnGoodsBill',
   component: (resolve) => {

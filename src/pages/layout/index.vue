@@ -120,7 +120,7 @@ export default {
             { name: "记忆价查询", url: "/order/memoryPrice" },
             { name: "日志查询", url: "/order/queryLog" },
             { name: "", url: "" },
-            { name: "数据列设置", url: "/order/setData" }
+            // { name: "数据列设置", url: "/order/setData" }
           ]
         },
         {

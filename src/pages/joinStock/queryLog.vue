@@ -18,6 +18,12 @@
                 <el-option v-for="item in options1" :key="item.value" :label="item.label" :value="item.value"></el-option>
               </el-select>
           </li>
+          <li class="search-item">
+              <label class="search-label">重要程度：</label>
+              <el-select class="search-select" size="small" clearable  v-model="value" placeholder="请选择操作人">
+                <el-option v-for="item in options1" :key="item.value" :label="item.label" :value="item.value"></el-option>
+              </el-select>
+          </li>
           <li class="search-item search-item-btn">
             <el-button class="search-btn" type="success" size="mini">搜索</el-button>
           </li> 

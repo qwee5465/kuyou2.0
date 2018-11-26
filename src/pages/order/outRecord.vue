@@ -74,7 +74,7 @@
             </tr>
           </tbody>
         </table>
-        <el-dialog title="入库单据纪录明细单" width="90%" custom-class="ky-detail-dialog" :visible.sync="dialogTableVisible">
+        <el-dialog title="出库单据纪录明细单" width="90%" custom-class="ky-detail-dialog" :visible.sync="dialogTableVisible">
           <div class="ky-detail-dialog-wrap">
             <div class="ky-detail-dialog-btn">
               <el-button size="small" type="success">导出</el-button>
@@ -154,7 +154,7 @@
                     <td>3</td>
                     <td>53.0</td>
                     <td>159</td>
-                    <th>要土鸡蛋</th>
+                    <td>要土鸡蛋</td>
                   </tr>
                 </tbody>
               </table>
